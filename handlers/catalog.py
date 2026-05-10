@@ -1,0 +1,57 @@
+from aiogram import Router, F
+from aiogram.types import CallbackQuery
+from keyboards import main_menu_kb, category_kb, product_kb
+from products import get_product, CATEGORIES
+
+router = Router()
+
+
+@router.callback_query(F.data == "menu:main")
+async def show_main_menu(callback: CallbackQuery):
+    await callback.message.edit_text(
+        "Choose a category:",
+        reply_markup=main_menu_kb()
+    )
+    await callback.answer()
+
+
+@router.callback_query(F.data.startswith("category:"))
+async def show_category(callback: CallbackQuery):
+    category = callback.data.split(":")[1]
+    label = CATEGORIES.get(category, category)
+    await callback.message.edit_text(
+        f"{label}\n\nSelect a product:",
+        reply_markup=category_kb(category)
+    )
+    await callback.answer()
+
+
+@router.callback_query(F.data.startswith("product:"))
+async def show_product(callback: CallbackQuery):
+    product_id = callback.data.split(":")[1]
+    product = get_product(product_id)
+    if not product:
+        await callback.answer("Product not found.", show_alert=True)
+        return
+
+    text = (
+        f"*{product['name']}*\n\n"
+        f"{product['description']}\n\n"
+        f"💫 Price: *{product['price']} Stars*"
+    )
+
+    try:
+        await callback.message.answer_photo(
+            photo=product["photo"],
+            caption=text,
+            parse_mode="Markdown",
+            reply_markup=product_kb(product_id)
+        )
+        await callback.message.delete()
+    except Exception:
+        await callback.message.edit_text(
+            text,
+            parse_mode="Markdown",
+            reply_markup=product_kb(product_id)
+        )
+    await callback.answer()
