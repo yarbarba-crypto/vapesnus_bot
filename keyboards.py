@@ -8,6 +8,7 @@ def main_menu_kb() -> InlineKeyboardMarkup:
     for key, label in CATEGORIES.items():
         builder.button(text=label, callback_data=f"category:{key}")
     builder.button(text="🛒 Моя корзина", callback_data="cart:view")
+    builder.button(text="💬 Задать вопрос", callback_data="support:ask")
     builder.adjust(1)
     return builder.as_markup()
 
