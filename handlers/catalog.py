@@ -1,65 +1,58 @@
-from aiogram.types import InlineKeyboardMarkup
-from aiogram.utils.keyboard import InlineKeyboardBuilder
-from products import CATEGORIES, get_by_category
+from aiogram import Router, F
+from aiogram.types import CallbackQuery
+from keyboards import main_menu_kb, vapes_menu_kb, category_kb, product_kb
+from products import get_product, CATEGORIES
+
+router = Router()
 
 
-def main_menu_kb() -> InlineKeyboardMarkup:
-    builder = InlineKeyboardBuilder()
-    builder.button(text="💨 Электронные сигареты", callback_data="menu:vapes")
-    builder.button(text="🐂 Снюс D.L.T.A.", callback_data="category:snus")
-    builder.button(text="🛒 Моя корзина", callback_data="cart:view")
-    builder.button(text="💬 Задать вопрос", callback_data="support:ask")
-    builder.adjust(1)
-    return builder.as_markup()
+@router.callback_query(F.data == "menu:main")
+async def show_main_menu(callback: CallbackQuery):
+    await callback.message.delete()
+    await callback.message.answer(
+        "Выбери категорию:",
+        reply_markup=main_menu_kb()
+    )
+    await callback.answer()
 
 
-def vapes_menu_kb() -> InlineKeyboardMarkup:
-    builder = InlineKeyboardBuilder()
-    builder.button(text="💨 WAKA soPro 20000", callback_data="category:waka")
-    builder.button(text="💨 PAFOS 20000", callback_data="category:pafos")
-    builder.button(text="🔙 Назад", callback_data="menu:main")
-    builder.adjust(1)
-    return builder.as_markup()
+@router.callback_query(F.data == "menu:vapes")
+async def show_vapes_menu(callback: CallbackQuery):
+    await callback.message.delete()
+    await callback.message.answer(
+        "💨 Выбери марку электронной сигареты:",
+        reply_markup=vapes_menu_kb()
+    )
+    await callback.answer()
 
 
-def category_kb(category: str) -> InlineKeyboardMarkup:
-    builder = InlineKeyboardBuilder()
-    for p in get_by_category(category):
-        builder.button(text=p["name"].split(" - ")[1] if " - " in p["name"] else p["name"], callback_data=f"product:{p['id']}")
-    if category in ["waka", "pafos"]:
-        builder.button(text="🔙 Назад", callback_data="menu:vapes")
-    else:
-        builder.button(text="🔙 Назад", callback_data="menu:main")
-    builder.adjust(1)
-    return builder.as_markup()
+@router.callback_query(F.data.startswith("category:"))
+async def show_category(callback: CallbackQuery):
+    category = callback.data.split(":")[1]
+    labels = {
+        "waka": "💨 WAKA soPro 20000",
+        "pafos": "💨 PAFOS 20000",
+        "snus": "🐂 D.L.T.A. Red Bull Edition",
+    }
+    label = labels.get(category, category)
+    await callback.message.delete()
+    await callback.message.answer(
+        f"{label}\n\nВыбери вкус:",
+        reply_markup=category_kb(category)
+    )
+    await callback.answer()
 
 
-def product_kb(product_id: str) -> InlineKeyboardMarkup:
-    builder = InlineKeyboardBuilder()
-    builder.button(text="➕ Добавить в корзину", callback_data=f"cart:add:{product_id}")
-    builder.button(text="🛒 Перейти в корзину", callback_data="cart:view")
-    builder.button(text="🔙 Назад", callback_data="menu:main")
-    builder.adjust(1)
-    return builder.as_markup()
+@router.callback_query(F.data.startswith("product:"))
+async def show_product(callback: CallbackQuery):
+    product_id = callback.data.split(":")[1]
+    product = get_product(product_id)
+    if not product:
+        await callback.answer("Товар не найден.", show_alert=True)
+        return
 
-
-def cart_kb(items: dict) -> InlineKeyboardMarkup:
-    builder = InlineKeyboardBuilder()
-    for product_id in items:
-        builder.button(
-            text="❌ Удалить товар",
-            callback_data=f"cart:remove:{product_id}"
-        )
-    if items:
-        builder.button(text="✅ Оформить заказ", callback_data="cart:checkout")
-    builder.button(text="🔙 Вернуться в магазин", callback_data="menu:main")
-    builder.adjust(1)
-    return builder.as_markup()
-
-
-def confirm_order_kb() -> InlineKeyboardMarkup:
-    builder = InlineKeyboardBuilder()
-    builder.button(text="💫 Оплатить звёздами", callback_data="order:pay")
-    builder.button(text="❌ Отмена", callback_data="menu:main")
-    builder.adjust(1)
-    return builder.as_markup()
+    caption = (
+        f"*{product['name']}*\n\n"
+        f"{product['description']}\n\n"
+        f"💫 Цена: *{product['price']} Stars*"
+    )
