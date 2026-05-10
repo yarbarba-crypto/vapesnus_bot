@@ -8,9 +8,9 @@ router = Router()
 @router.message(CommandStart())
 async def cmd_start(message: Message):
     await message.answer(
-        "👋 Welcome to our store!\n\n"
-        "We sell premium disposable vapes and nicotine pouches.\n"
-        "Browse our catalogue and order with Telegram Stars ⭐\n\n"
-        "Choose a category to get started:",
+        "👋 Добро пожаловать в наш магазин!\n\n"
+        "Мы продаём одноразовые вейпы и никотиновые пауч​и.\n"
+        "Выбирай товары и оплачивай звёздами Telegram ⭐\n\n"
+        "Выбери категорию:",
         reply_markup=main_menu_kb()
     )
