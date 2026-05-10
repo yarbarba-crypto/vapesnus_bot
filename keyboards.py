@@ -5,8 +5,8 @@ from products import CATEGORIES, get_by_category
 
 def main_menu_kb() -> InlineKeyboardMarkup:
     builder = InlineKeyboardBuilder()
-    for key, label in CATEGORIES.items():
-        builder.button(text=label, callback_data=f"category:{key}")
+    builder.button(text="💨 Электронные сигареты", callback_data="category:vapes")
+    builder.button(text="🐂 Снюс D.L.T.A.", callback_data="category:snus")
     builder.button(text="🛒 Моя корзина", callback_data="cart:view")
     builder.button(text="💬 Задать вопрос", callback_data="support:ask")
     builder.adjust(1)
