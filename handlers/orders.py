@@ -19,7 +19,7 @@ async def send_invoice(callback: CallbackQuery, state: FSMContext, bot: Bot):
     data = await state.get_data()
     cart = get_cart(data)
     if not cart:
-        await callback.answer("Cart is empty!", show_alert=True)
+        await callback.answer("Корзина пуста!", show_alert=True)
         return
 
     prices = []
@@ -34,7 +34,7 @@ async def send_invoice(callback: CallbackQuery, state: FSMContext, bot: Bot):
 
     await bot.send_invoice(
         chat_id=callback.from_user.id,
-        title="Your Order",
+        title="Ваш заказ",
         description=description,
         payload="order_payload",
         currency="XTR",
@@ -65,20 +65,20 @@ async def successful_payment(message: Message, state: FSMContext, bot: Bot):
     stars_paid = payment.total_amount
 
     await message.answer(
-        f"✅ *Payment received! Thank you!*\n\n"
-        f"💫 Paid: {stars_paid} Stars\n\n"
-        f"*Your order:*\n{order_text}\n\n"
-        f"We'll process your order shortly and reach out with delivery details.",
+        f"✅ *Оплата получена! Спасибо за заказ!*\n\n"
+        f"💫 Оплачено: {stars_paid} звёзд\n\n"
+        f"*Ваш заказ:*\n{order_text}\n\n"
+        f"Мы обработаем ваш заказ и свяжемся с вами для уточнения деталей доставки.",
         parse_mode="Markdown"
     )
 
     user = message.from_user
     admin_text = (
-        f"🛍 *New Order!*\n\n"
-        f"👤 Customer: [{user.full_name}](tg://user?id={user.id})\n"
-        f"🆔 User ID: `{user.id}`\n"
-        f"💫 Paid: {stars_paid} Stars\n\n"
-        f"*Items:*\n{order_text}"
+        f"🛍 *Новый заказ!*\n\n"
+        f"👤 Покупатель: [{user.full_name}](tg://user?id={user.id})\n"
+        f"🆔 ID: `{user.id}`\n"
+        f"💫 Оплачено: {stars_paid} звёзд\n\n"
+        f"*Товары:*\n{order_text}"
     )
     for admin_id in ADMIN_IDS:
         try:
