@@ -50,8 +50,8 @@ PRODUCTS = {
 }
 
 CATEGORIES = {
-    "vapes": "💨 Disposable Vapes",
-    "snus":  "🟢 Nicotine Pouches",
+    "vapes": "💨 Одноразовые вейпы",
+    "snus":  "🟢 Никотиновые паучи",
 }
 
 def get_by_category(category: str) -> list:
