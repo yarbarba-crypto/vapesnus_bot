@@ -30,6 +30,14 @@ async def cmd_ask(message: Message, state: FSMContext):
     await message.answer("📝 Напишите ваш вопрос:")
 
 
+@router.callback_query(F.data == "support:ask")
+async def btn_ask(callback: CallbackQuery, state: FSMContext):
+    await state.clear()
+    await state.set_state(UserQuestion.waiting)
+    await callback.message.answer("📝 Напишите ваш вопрос:")
+    await callback.answer()
+
+
 @router.message(StateFilter(UserQuestion.waiting))
 async def got_question(message: Message, state: FSMContext, bot: Bot):
     user = message.from_user
