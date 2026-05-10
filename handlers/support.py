@@ -9,47 +9,63 @@ from config import ADMIN_IDS
 router = Router()
 
 
-class SupportState(StatesGroup):
-    waiting_for_question = State()
-    waiting_for_reply = State()
+class AdminReply(StatesGroup):
+    waiting = State()
 
 
-def admin_reply_kb(user_id: int):
+def reply_kb(user_id: int):
     builder = InlineKeyboardBuilder()
     builder.button(text="💬 Ответить", callback_data=f"reply:{user_id}")
     return builder.as_markup()
 
 
-# Покупатель пишет /ask
+# Шаг 1: покупатель пишет /ask
 @router.message(Command("ask"))
-async def ask_question(message: Message, state: FSMContext):
-    await state.set_state(SupportState.waiting_for_question)
-    await message.answer("📝 Напишите ваш вопрос следующим сообщением:")
-
-
-# Покупатель пишет вопрос
-@router.message(SupportState.waiting_for_question)
-async def receive_question(message: Message, state: FSMContext, bot: Bot):
-    user = message.from_user
-    for admin_id in ADMIN_IDS:
-        try:
-            await bot.send_message(
-                admin_id,
-                f"📨 *Новое сообщение от покупателя*\n\n"
-                f"👤 [{user.full_name}](tg://user?id={user.id})\n"
-                f"🆔 ID: `{user.id}`\n\n"
-                f"💬 {message.text}",
-                parse_mode="Markdown",
-                reply_markup=admin_reply_kb(user.id)
-            )
-        except Exception:
-            pass
-    await message.answer("✅ Ваш вопрос отправлен! Ожидайте ответа.")
+async def cmd_ask(message: Message, state: FSMContext):
     await state.clear()
+    await message.answer("📝 Напишите ваш вопрос:")
+    await state.set_state("waiting_question")
 
 
-# Админ нажимает "Ответить"
+# Шаг 2: покупатель пишет вопрос
+@router.message(F.text, F.state == "waiting_question")
+async def got_question(message: Message, state: FSMContext, bot: Bot):
+    user = message.from_user
+    await state.clear()
+    for admin_id in ADMIN_IDS:
+        await bot.send_message(
+            admin_id,
+            f"📨 *Вопрос от покупателя*\n\n"
+            f"👤 {user.full_name}\n"
+            f"🆔 `{user.id}`\n\n"
+            f"💬 {message.text}",
+            parse_mode="Markdown",
+            reply_markup=reply_kb(user.id)
+        )
+    await message.answer("✅ Вопрос отправлен! Ожидайте ответа.")
+
+
+# Шаг 3: админ нажимает "Ответить"
 @router.callback_query(F.data.startswith("reply:"))
-async def admin_reply_start(callback: CallbackQuery, state: FSMContext):
-    if callback.from_user.id not in ADMIN_IDS:
-        await callbac
+async def cb_reply(callback: CallbackQuery, state: FSMContext):
+    await state.clear()
+    user_id = int(callback.data.split(":")[1])
+    await state.update_data(reply_to=user_id)
+    await state.set_state(AdminReply.waiting)
+    await callback.message.answer(f"✏️ Напишите ответ покупателю:")
+    await callback.answer()
+
+
+# Шаг 4: админ пишет ответ
+@router.message(AdminReply.waiting)
+async def send_reply(message: Message, state: FSMContext, bot: Bot):
+    data = await state.get_data()
+    user_id = data.get("reply_to")
+    await state.clear()
+    if user_id:
+        await bot.send_message(
+            user_id,
+            f"💬 *Ответ от поддержки:*\n\n{message.text}",
+            parse_mode="Markdown"
+        )
+        await message.answer("✅ Ответ отправлен!")
