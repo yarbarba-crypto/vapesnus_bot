@@ -3,10 +3,14 @@ from aiogram.types import Message, CallbackQuery
 from aiogram.utils.keyboard import InlineKeyboardBuilder
 from aiogram.fsm.context import FSMContext
 from aiogram.fsm.state import State, StatesGroup
-from aiogram.filters import Command
+from aiogram.filters import Command, StateFilter
 from config import ADMIN_IDS
 
 router = Router()
+
+
+class UserQuestion(StatesGroup):
+    waiting = State()
 
 
 class AdminReply(StatesGroup):
@@ -19,16 +23,14 @@ def reply_kb(user_id: int):
     return builder.as_markup()
 
 
-# Шаг 1: покупатель пишет /ask
 @router.message(Command("ask"))
 async def cmd_ask(message: Message, state: FSMContext):
     await state.clear()
+    await state.set_state(UserQuestion.waiting)
     await message.answer("📝 Напишите ваш вопрос:")
-    await state.set_state("waiting_question")
 
 
-# Шаг 2: покупатель пишет вопрос
-@router.message(F.text, F.state == "waiting_question")
+@router.message(StateFilter(UserQuestion.waiting))
 async def got_question(message: Message, state: FSMContext, bot: Bot):
     user = message.from_user
     await state.clear()
@@ -45,19 +47,17 @@ async def got_question(message: Message, state: FSMContext, bot: Bot):
     await message.answer("✅ Вопрос отправлен! Ожидайте ответа.")
 
 
-# Шаг 3: админ нажимает "Ответить"
 @router.callback_query(F.data.startswith("reply:"))
 async def cb_reply(callback: CallbackQuery, state: FSMContext):
     await state.clear()
     user_id = int(callback.data.split(":")[1])
     await state.update_data(reply_to=user_id)
     await state.set_state(AdminReply.waiting)
-    await callback.message.answer(f"✏️ Напишите ответ покупателю:")
+    await callback.message.answer("✏️ Напишите ответ покупателю:")
     await callback.answer()
 
 
-# Шаг 4: админ пишет ответ
-@router.message(AdminReply.waiting)
+@router.message(StateFilter(AdminReply.waiting))
 async def send_reply(message: Message, state: FSMContext, bot: Bot):
     data = await state.get_data()
     user_id = data.get("reply_to")
