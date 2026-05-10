@@ -8,8 +8,9 @@ router = Router()
 
 @router.callback_query(F.data == "menu:main")
 async def show_main_menu(callback: CallbackQuery):
-    await callback.message.edit_text(
-        "Choose a category:",
+    await callback.message.delete()
+    await callback.message.answer(
+        "Выбери категорию:",
         reply_markup=main_menu_kb()
     )
     await callback.answer()
@@ -19,8 +20,9 @@ async def show_main_menu(callback: CallbackQuery):
 async def show_category(callback: CallbackQuery):
     category = callback.data.split(":")[1]
     label = CATEGORIES.get(category, category)
-    await callback.message.edit_text(
-        f"{label}\n\nSelect a product:",
+    await callback.message.delete()
+    await callback.message.answer(
+        f"{label}\n\nВыбери товар:",
         reply_markup=category_kb(category)
     )
     await callback.answer()
@@ -31,26 +33,27 @@ async def show_product(callback: CallbackQuery):
     product_id = callback.data.split(":")[1]
     product = get_product(product_id)
     if not product:
-        await callback.answer("Product not found.", show_alert=True)
+        await callback.answer("Товар не найден.", show_alert=True)
         return
 
-    text = (
+    caption = (
         f"*{product['name']}*\n\n"
         f"{product['description']}\n\n"
-        f"💫 Price: *{product['price']} Stars*"
+        f"💫 Цена: *{product['price']} Stars*"
     )
 
     try:
+        await callback.message.delete()
         await callback.message.answer_photo(
             photo=product["photo"],
-            caption=text,
+            caption=caption,
             parse_mode="Markdown",
             reply_markup=product_kb(product_id)
         )
-        await callback.message.delete()
     except Exception:
-        await callback.message.edit_text(
-            text,
+        await callback.message.delete()
+        await callback.message.answer(
+            caption,
             parse_mode="Markdown",
             reply_markup=product_kb(product_id)
         )
