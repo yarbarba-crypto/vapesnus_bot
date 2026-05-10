@@ -13,8 +13,8 @@ def get_cart(data: dict) -> dict:
 
 def format_cart(cart: dict) -> str:
     if not cart:
-        return "🛒 Your cart is empty."
-    lines = ["🛒 *Your Cart:*\n"]
+        return "🛒 Ваша корзина пуста."
+    lines = ["🛒 *Ваша корзина:*\n"]
     total = 0
     for product_id, qty in cart.items():
         p = get_product(product_id)
@@ -22,7 +22,7 @@ def format_cart(cart: dict) -> str:
             subtotal = p["price"] * qty
             total += subtotal
             lines.append(f"• {p['name']} × {qty} = {subtotal} ⭐")
-    lines.append(f"\n💰 *Total: {total} Stars*")
+    lines.append(f"\n💰 *Итого: {total} звёзд*")
     return "\n".join(lines)
 
 
@@ -31,7 +31,7 @@ async def add_to_cart(callback: CallbackQuery, state: FSMContext):
     product_id = callback.data.split(":")[2]
     product = get_product(product_id)
     if not product:
-        await callback.answer("Product not found.", show_alert=True)
+        await callback.answer("Товар не найден.", show_alert=True)
         return
 
     data = await state.get_data()
@@ -39,7 +39,7 @@ async def add_to_cart(callback: CallbackQuery, state: FSMContext):
     cart[product_id] = cart.get(product_id, 0) + 1
     await state.update_data(cart=cart)
 
-    await callback.answer(f"✅ {product['name']} added to cart!", show_alert=False)
+    await callback.answer(f"✅ {product['name']} добавлен в корзину!")
 
 
 @router.callback_query(F.data == "cart:view")
@@ -71,7 +71,7 @@ async def remove_from_cart(callback: CallbackQuery, state: FSMContext):
         parse_mode="Markdown",
         reply_markup=cart_kb(cart)
     )
-    await callback.answer("Item removed.")
+    await callback.answer("Товар удалён.")
 
 
 @router.callback_query(F.data == "cart:checkout")
@@ -80,11 +80,11 @@ async def checkout(callback: CallbackQuery, state: FSMContext):
     cart = get_cart(data)
 
     if not cart:
-        await callback.answer("Your cart is empty!", show_alert=True)
+        await callback.answer("Ваша корзина пуста!", show_alert=True)
         return
 
     total = sum(get_product(pid)["price"] * qty for pid, qty in cart.items() if get_product(pid))
-    text = format_cart(cart) + f"\n\nReady to pay *{total} Stars*?"
+    text = format_cart(cart) + f"\n\nГотовы оплатить *{total} звёзд*?"
     await callback.message.edit_text(
         text,
         parse_mode="Markdown",
