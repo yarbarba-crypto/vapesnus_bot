@@ -1,6 +1,6 @@
 from aiogram import Router, F
 from aiogram.types import CallbackQuery
-from keyboards import main_menu_kb, vapes_menu_kb, category_kb, product_kb
+from keyboards import main_menu_kb, vapes_menu_kb, snus_menu_kb, category_kb, product_kb
 from products import get_product
 
 router = Router()
@@ -26,13 +26,25 @@ async def show_vapes_menu(callback: CallbackQuery):
     await callback.answer()
 
 
+@router.callback_query(F.data == "menu:snus")
+async def show_snus_menu(callback: CallbackQuery):
+    await callback.message.delete()
+    await callback.message.answer(
+        "🟢 Выбери марку снюса:",
+        reply_markup=snus_menu_kb()
+    )
+    await callback.answer()
+
+
 @router.callback_query(F.data.startswith("category:"))
 async def show_category(callback: CallbackQuery):
     category = callback.data.split(":")[1]
     labels = {
         "waka": "💨 WAKA soPro 20000",
         "pafos": "💨 PAFOS 20000",
+        "puffmi": "💨 PUFFMI Mosh 40000",
         "snus": "🐂 D.L.T.A. Red Bull Edition",
+        "odens": "🇸🇪 Oden's (Швеция)",
     }
     label = labels.get(category, category)
     await callback.message.delete()
