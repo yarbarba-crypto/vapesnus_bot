@@ -1,7 +1,7 @@
 from aiogram import Router, F
 from aiogram.types import CallbackQuery
 from keyboards import main_menu_kb, vapes_menu_kb, category_kb, product_kb
-from products import get_product, CATEGORIES
+from products import get_product
 
 router = Router()
 
@@ -10,7 +10,7 @@ router = Router()
 async def show_main_menu(callback: CallbackQuery):
     await callback.message.delete()
     await callback.message.answer(
-        "Выбери категорию:",
+        "📖 Добро пожаловать в каталог!\n\nВыбери категорию:",
         reply_markup=main_menu_kb()
     )
     await callback.answer()
@@ -53,6 +53,22 @@ async def show_product(callback: CallbackQuery):
 
     caption = (
         f"*{product['name']}*\n\n"
-        f"{product['description']}\n\n"
-        f"💫 Цена: *{product['price']} Stars*"
+        f"{product['description']}"
     )
+
+    try:
+        await callback.message.delete()
+        await callback.message.answer_photo(
+            photo=product["photo"],
+            caption=caption,
+            parse_mode="Markdown",
+            reply_markup=product_kb(product_id)
+        )
+    except Exception:
+        await callback.message.delete()
+        await callback.message.answer(
+            caption,
+            parse_mode="Markdown",
+            reply_markup=product_kb(product_id)
+        )
+    await callback.answer()
