@@ -5,7 +5,6 @@ PRODUCTS = {
         "category": "snus",
         "name": "D.L.T.A. Red Bull - Peach Edition",
         "description": "Вкус: Персик\n20 порций · 150mg никотина · Red Bull",
-        "price": 200,
         "photo": "https://nico-kz1.com/wp-content/uploads/2025/10/NICOKAZ-SNUS-DLTA-peach.jpg",
     },
     "dlta_2": {
@@ -13,7 +12,6 @@ PRODUCTS = {
         "category": "snus",
         "name": "D.L.T.A. Red Bull - Classic",
         "description": "Вкус: Red Bull классический\n20 порций · 150mg никотина · Red Bull",
-        "price": 200,
         "photo": "https://nico-kz1.com/wp-content/uploads/2025/10/NICOKAZ-SNUS-DLTA-summer.jpg",
     },
     "dlta_3": {
@@ -21,7 +19,6 @@ PRODUCTS = {
         "category": "snus",
         "name": "D.L.T.A. Red Bull - Apricot Edition",
         "description": "Вкус: Абрикос и клубника\n20 порций · 150mg никотина · Red Bull",
-        "price": 200,
         "photo": "https://nico-kz1.com/wp-content/uploads/2025/10/NICOKAZ-SNUS-DLTA-apricot.jpg",
     },
     "dlta_4": {
@@ -29,7 +26,6 @@ PRODUCTS = {
         "category": "snus",
         "name": "D.L.T.A. Red Bull - Summer Edition (Арбуз)",
         "description": "Вкус: Арбуз\n20 порций · 150mg никотина · Red Bull",
-        "price": 200,
         "photo": "https://nico-kz1.com/wp-content/uploads/2025/10/NICOKAZ-SNUS-DLTA-summer.jpg",
     },
     "dlta_5": {
@@ -37,7 +33,6 @@ PRODUCTS = {
         "category": "snus",
         "name": "D.L.T.A. Red Bull - Summer Edition (Киви)",
         "description": "Вкус: Киви и яблоко\n20 порций · 150mg никотина · Red Bull",
-        "price": 200,
         "photo": "https://nico-kz1.com/wp-content/uploads/2025/10/NICOKAZ-SNUS-DLTA-green-2.jpg",
     },
     "dlta_6": {
@@ -45,7 +40,6 @@ PRODUCTS = {
         "category": "snus",
         "name": "D.L.T.A. Red Bull - Green Edition",
         "description": "Вкус: Лесные ягоды\n20 порций · 150mg никотина · Red Bull",
-        "price": 200,
         "photo": "https://nico-kz1.com/wp-content/uploads/2025/10/NICOKAZ-SNUS-DLTA-green-2.jpg",
     },
     "dlta_7": {
@@ -53,17 +47,15 @@ PRODUCTS = {
         "category": "snus",
         "name": "D.L.T.A. Red Bull - Pink Edition",
         "description": "Вкус: Лесные ягоды\n20 порций · 150mg никотина · Red Bull",
-        "price": 200,
         "photo": "https://nico-kz1.com/wp-content/uploads/2025/10/NICOKAZ-SNUS-DLTA-pink.jpg",
     },
- 
+
     # -- WAKA soPro 20000
     "waka_1": {
         "id": "waka_1",
         "category": "waka",
         "name": "WAKA 20000 - Арбузная Жвачка",
         "description": "Вкус: Арбузная жвачка\n20000 тяг · Смарт-экран · Быстрая зарядка",
-        "price": 300,
         "photo": "https://cis.wakavaping.com/cdn/shop/files/ff704ec17be3865b93a83defdf7e9a5c.png?v=1759207651",
     },
     "waka_2": {
@@ -71,7 +63,6 @@ PRODUCTS = {
         "category": "waka",
         "name": "WAKA 20000 - Вишнёвая Кола",
         "description": "Вкус: Вишнёвая кола\n20000 тяг · Смарт-экран · Быстрая зарядка",
-        "price": 300,
         "photo": "https://cis.wakavaping.com/cdn/shop/files/31f3e66f8f8850037f005458373a8843.png?v=1759207660",
     },
     "waka_3": {
@@ -79,7 +70,6 @@ PRODUCTS = {
         "category": "waka",
         "name": "WAKA 20000 - Газированная Вишня Лайм",
         "description": "Вкус: Газированная вишня лайм\n20000 тяг · Смарт-экран · Быстрая зарядка",
-        "price": 300,
         "photo": "https://cis.wakavaping.com/cdn/shop/files/a40cf96c8694ab1726b26c86f2694e8e_cfd6ddeb-bb77-4a73-9d1e-53862137ad4e.png?v=1759207667",
     },
     "waka_4": {
@@ -87,7 +77,6 @@ PRODUCTS = {
         "category": "waka",
         "name": "WAKA 20000 - Двойное Кислое Яблоко",
         "description": "Вкус: Двойное кислое яблоко\n20000 тяг · Смарт-экран · Быстрая зарядка",
-        "price": 300,
         "photo": "https://cis.wakavaping.com/cdn/shop/files/9c77e98753c7892a1ee4184a42f886da.png?v=1759207673",
     },
     "waka_5": {
@@ -95,7 +84,6 @@ PRODUCTS = {
         "category": "waka",
         "name": "WAKA 20000 - Киви Лимон",
         "description": "Вкус: Киви лимон\n20000 тяг · Смарт-экран · Быстрая зарядка",
-        "price": 300,
         "photo": "https://cis.wakavaping.com/cdn/shop/files/5b96be844d6e041354d5a071c8d4d51d.png?v=1759207693",
     },
     "waka_6": {
@@ -103,7 +91,6 @@ PRODUCTS = {
         "category": "waka",
         "name": "WAKA 20000 - Морская Соль Лимонная Конфета",
         "description": "Вкус: Морская соль лимонная конфета\n20000 тяг · Смарт-экран · Быстрая зарядка",
-        "price": 300,
         "photo": "https://cis.wakavaping.com/cdn/shop/files/908eefb3e8b6335ab9c28a5785effc96.png?v=1759207698",
     },
     "waka_7": {
@@ -111,7 +98,6 @@ PRODUCTS = {
         "category": "waka",
         "name": "WAKA 20000 - Черника Малина Лимон",
         "description": "Вкус: Черника малина лимон\n20000 тяг · Смарт-экран · Быстрая зарядка",
-        "price": 300,
         "photo": "https://cis.wakavaping.com/cdn/shop/files/cae8911bb3653f1bccbe9620e9aa0e38.png?v=1759207711",
     },
     "waka_8": {
@@ -119,7 +105,6 @@ PRODUCTS = {
         "category": "waka",
         "name": "WAKA 20000 - Черничный Энергетик",
         "description": "Вкус: Черничный энергетик\n20000 тяг · Смарт-экран · Быстрая зарядка",
-        "price": 300,
         "photo": "https://cis.wakavaping.com/cdn/shop/files/ae649c0a677015caebec9636570d0478.png?v=1759207719",
     },
     "waka_9": {
@@ -127,7 +112,6 @@ PRODUCTS = {
         "category": "waka",
         "name": "WAKA 20000 - Чупа-чупс Клубника Малина",
         "description": "Вкус: Чупа-чупс клубника малина\n20000 тяг · Смарт-экран · Быстрая зарядка",
-        "price": 300,
         "photo": "https://cis.wakavaping.com/cdn/shop/files/f5225e51322869e60e19ec50f5b18b11_c7d73f24-c4aa-4abe-9425-6ed21bc9705d.png?v=1759207726",
     },
     "waka_10": {
@@ -135,17 +119,15 @@ PRODUCTS = {
         "category": "waka",
         "name": "WAKA 20000 - Чупа-чупс Яблоко",
         "description": "Вкус: Чупа-чупс яблоко\n20000 тяг · Смарт-экран · Быстрая зарядка",
-        "price": 300,
         "photo": "https://cis.wakavaping.com/cdn/shop/files/f5e585bcac5d2759413e72dd48b1c499.png?v=1759207730",
     },
- 
+
     # -- PAFOS 20000
     "pafos_1": {
         "id": "pafos_1",
         "category": "pafos",
         "name": "PAFOS 20000 - Ежевика Содовая",
         "description": "Вкус: Ежевика содовая\n20000 тяг · 2 режима мощности · 22мл",
-        "price": 300,
         "photo": "https://static.tildacdn.com/tild3838-3166-4239-a438-376163353038/xb30_limoncello.png",
     },
     "pafos_2": {
@@ -153,7 +135,6 @@ PRODUCTS = {
         "category": "pafos",
         "name": "PAFOS 20000 - Черная Смородина Содовая",
         "description": "Вкус: Черная смородина содовая\n20000 тяг · 2 режима мощности · 22мл",
-        "price": 300,
         "photo": "https://static.tildacdn.com/tild6462-6633-4536-b961-306361383964/xb30_limoncello-2.png",
     },
     "pafos_3": {
@@ -161,7 +142,6 @@ PRODUCTS = {
         "category": "pafos",
         "name": "PAFOS 20000 - Голубика Облепиха Клюква",
         "description": "Вкус: Голубика облепиха клюква\n20000 тяг · 2 режима мощности · 22мл",
-        "price": 300,
         "photo": "https://static.tildacdn.com/tild6533-6537-4639-b764-643066666233/xb30_limoncello-2.png",
     },
     "pafos_4": {
@@ -169,7 +149,6 @@ PRODUCTS = {
         "category": "pafos",
         "name": "PAFOS 20000 - Голубика Содовая",
         "description": "Вкус: Голубика содовая\n20000 тяг · 2 режима мощности · 22мл",
-        "price": 300,
         "photo": "https://static.tildacdn.com/tild3930-6635-4465-b761-343837383734/xb30_limoncello-3.png",
     },
     "pafos_5": {
@@ -177,7 +156,6 @@ PRODUCTS = {
         "category": "pafos",
         "name": "PAFOS 20000 - Карамбола",
         "description": "Вкус: Карамбола\n20000 тяг · 2 режима мощности · 22мл",
-        "price": 300,
         "photo": "https://static.tildacdn.com/tild6566-3637-4666-a561-383139643533/xb30_limoncello-2.png",
     },
     "pafos_6": {
@@ -185,7 +163,6 @@ PRODUCTS = {
         "category": "pafos",
         "name": "PAFOS 20000 - Габба Киви Алоэ",
         "description": "Вкус: Габба киви алоэ\n20000 тяг · 2 режима мощности · 22мл",
-        "price": 300,
         "photo": "https://static.tildacdn.com/tild6366-3839-4666-b265-323561646264/xb30_limoncello-2.png",
     },
     "pafos_7": {
@@ -193,7 +170,6 @@ PRODUCTS = {
         "category": "pafos",
         "name": "PAFOS 20000 - Айс Бейби",
         "description": "Вкус: Айс бейби\n20000 тяг · 2 режима мощности · 22мл",
-        "price": 300,
         "photo": "https://static.tildacdn.com/tild3838-3761-4635-b534-353432333465/xb30_limoncello-2.png",
     },
     "pafos_8": {
@@ -201,7 +177,6 @@ PRODUCTS = {
         "category": "pafos",
         "name": "PAFOS 20000 - Ананас Личи",
         "description": "Вкус: Ананас личи\n20000 тяг · 2 режима мощности · 22мл",
-        "price": 300,
         "photo": "https://static.tildacdn.com/tild3337-3066-4166-a539-326233633932/xb30_limoncello-7.png",
     },
     "pafos_9": {
@@ -209,7 +184,6 @@ PRODUCTS = {
         "category": "pafos",
         "name": "PAFOS 20000 - Гранат Лайм Содовая",
         "description": "Вкус: Гранат лайм содовая\n20000 тяг · 2 режима мощности · 22мл",
-        "price": 300,
         "photo": "https://static.tildacdn.com/tild3665-3466-4665-b162-636132393861/xb30_limoncello-12.png",
     },
     "pafos_10": {
@@ -217,7 +191,6 @@ PRODUCTS = {
         "category": "pafos",
         "name": "PAFOS 20000 - Сицилийский Апельсин Клубника",
         "description": "Вкус: Сицилийский апельсин клубника\n20000 тяг · 2 режима мощности · 22мл",
-        "price": 300,
         "photo": "https://static.tildacdn.com/tild3564-6132-4262-b938-626561373931/xb30_limoncello-11.png",
     },
     "pafos_11": {
@@ -225,7 +198,6 @@ PRODUCTS = {
         "category": "pafos",
         "name": "PAFOS 20000 - Ягодный Скитлс",
         "description": "Вкус: Ягодный скитлс\n20000 тяг · 2 режима мощности · 22мл",
-        "price": 300,
         "photo": "https://static.tildacdn.com/tild3031-3161-4938-a431-383932643636/xb30_limoncello-10.png",
     },
     "pafos_12": {
@@ -233,7 +205,6 @@ PRODUCTS = {
         "category": "pafos",
         "name": "PAFOS 20000 - Клубника Киви Лимон",
         "description": "Вкус: Клубника киви лимон\n20000 тяг · 2 режима мощности · 22мл",
-        "price": 300,
         "photo": "https://static.tildacdn.com/tild3238-3161-4361-b631-373639636661/xb30_limoncello-9.png",
     },
     "pafos_13": {
@@ -241,7 +212,6 @@ PRODUCTS = {
         "category": "pafos",
         "name": "PAFOS 20000 - Кактус Лимон",
         "description": "Вкус: Кактус лимон\n20000 тяг · 2 режима мощности · 22мл",
-        "price": 300,
         "photo": "https://static.tildacdn.com/tild3439-3666-4534-a235-316134316337/xb30_limoncello-8.png",
     },
     "pafos_14": {
@@ -249,7 +219,6 @@ PRODUCTS = {
         "category": "pafos",
         "name": "PAFOS 20000 - Тропический",
         "description": "Вкус: Тропический\n20000 тяг · 2 режима мощности · 22мл",
-        "price": 300,
         "photo": "https://static.tildacdn.com/tild3732-3634-4463-a639-336464646665/xb30_tropic_1.png",
     },
     "pafos_15": {
@@ -257,7 +226,6 @@ PRODUCTS = {
         "category": "pafos",
         "name": "PAFOS 20000 - Грейпфрут",
         "description": "Вкус: Грейпфрут\n20000 тяг · 2 режима мощности · 22мл",
-        "price": 300,
         "photo": "https://static.tildacdn.com/tild3839-6234-4166-a262-366135303833/xb30_grapefruit.png",
     },
     "pafos_16": {
@@ -265,7 +233,6 @@ PRODUCTS = {
         "category": "pafos",
         "name": "PAFOS 20000 - Экзотический",
         "description": "Вкус: Экзотический\n20000 тяг · 2 режима мощности · 22мл",
-        "price": 300,
         "photo": "https://static.tildacdn.com/tild3432-6330-4831-a638-663466306634/xb30_exotic.png",
     },
     "pafos_17": {
@@ -273,7 +240,6 @@ PRODUCTS = {
         "category": "pafos",
         "name": "PAFOS 20000 - Яблочный Леденец",
         "description": "Вкус: Яблочный леденец\n20000 тяг · 2 режима мощности · 22мл",
-        "price": 300,
         "photo": "https://static.tildacdn.com/tild3339-3536-4938-b435-343966366132/xb30_apple_lollipop.png",
     },
     "pafos_18": {
@@ -281,7 +247,6 @@ PRODUCTS = {
         "category": "pafos",
         "name": "PAFOS 20000 - Клюква Содовая",
         "description": "Вкус: Клюква содовая\n20000 тяг · 2 режима мощности · 22мл",
-        "price": 300,
         "photo": "https://static.tildacdn.com/tild3761-3736-4230-b035-363161336464/xb30_cranberry_soda.png",
     },
     "pafos_19": {
@@ -289,7 +254,6 @@ PRODUCTS = {
         "category": "pafos",
         "name": "PAFOS 20000 - Вишня Лимон",
         "description": "Вкус: Вишня лимон\n20000 тяг · 2 режима мощности · 22мл",
-        "price": 300,
         "photo": "https://static.tildacdn.com/tild3763-6538-4161-a337-393364613838/xb30_cherry_lemon.png",
     },
     "pafos_20": {
@@ -297,7 +261,6 @@ PRODUCTS = {
         "category": "pafos",
         "name": "PAFOS 20000 - Черника Малина Лимон",
         "description": "Вкус: Черника малина лимон\n20000 тяг · 2 режима мощности · 22мл",
-        "price": 300,
         "photo": "https://static.tildacdn.com/tild3265-3233-4133-a661-666663323936/xb30_blueberry_raspb.png",
     },
     "pafos_21": {
@@ -305,7 +268,6 @@ PRODUCTS = {
         "category": "pafos",
         "name": "PAFOS 20000 - Клубника Арбуз",
         "description": "Вкус: Клубника арбуз\n20000 тяг · 2 режима мощности · 22мл",
-        "price": 300,
         "photo": "https://static.tildacdn.com/tild3730-3834-4466-a532-646338353732/xb30_strawberry_wate.png",
     },
     "pafos_22": {
@@ -313,7 +275,6 @@ PRODUCTS = {
         "category": "pafos",
         "name": "PAFOS 20000 - Мармеладные Мишки",
         "description": "Вкус: Мармеладные мишки\n20000 тяг · 2 режима мощности · 22мл",
-        "price": 300,
         "photo": "https://static.tildacdn.com/tild6530-3561-4063-a533-303865666562/xb30_gummy_bears.png",
     },
     "pafos_23": {
@@ -321,7 +282,6 @@ PRODUCTS = {
         "category": "pafos",
         "name": "PAFOS 20000 - Клюква Виноград",
         "description": "Вкус: Клюква виноград\n20000 тяг · 2 режима мощности · 22мл",
-        "price": 300,
         "photo": "https://static.tildacdn.com/tild3633-3739-4364-b463-303461666339/xb30_cranberries_gra.png",
     },
     "pafos_24": {
@@ -329,7 +289,6 @@ PRODUCTS = {
         "category": "pafos",
         "name": "PAFOS 20000 - Кокосовое Мороженое",
         "description": "Вкус: Кокосовое мороженое\n20000 тяг · 2 режима мощности · 22мл",
-        "price": 300,
         "photo": "https://static.tildacdn.com/tild3663-3631-4137-b261-303237633566/xb30_coconut_ice_cre.png",
     },
     "pafos_25": {
@@ -337,7 +296,6 @@ PRODUCTS = {
         "category": "pafos",
         "name": "PAFOS 20000 - Сладкая Мята",
         "description": "Вкус: Сладкая мята\n20000 тяг · 2 режима мощности · 22мл",
-        "price": 300,
         "photo": "https://static.tildacdn.com/tild3261-6435-4934-b032-363435653739/xb30_sweet_mint.png",
     },
     "pafos_26": {
@@ -345,7 +303,6 @@ PRODUCTS = {
         "category": "pafos",
         "name": "PAFOS 20000 - Лимончелло",
         "description": "Вкус: Лимончелло\n20000 тяг · 2 режима мощности · 22мл",
-        "price": 300,
         "photo": "https://static.tildacdn.com/tild6637-6435-4261-a136-303134356630/xb30_limoncello_1.png",
     },
     "pafos_27": {
@@ -353,7 +310,6 @@ PRODUCTS = {
         "category": "pafos",
         "name": "PAFOS 20000 - Кофеин",
         "description": "Вкус: Кофеин\n20000 тяг · 2 режима мощности · 22мл",
-        "price": 300,
         "photo": "https://static.tildacdn.com/tild6136-3631-4234-a162-333539646461/xb30_caffeine.png",
     },
     "pafos_28": {
@@ -361,7 +317,6 @@ PRODUCTS = {
         "category": "pafos",
         "name": "PAFOS 20000 - Двойное Яблоко",
         "description": "Вкус: Двойное яблоко\n20000 тяг · 2 режима мощности · 22мл",
-        "price": 300,
         "photo": "https://static.tildacdn.com/tild3763-6238-4365-b039-383432653432/xb30_double_apple.png",
     },
     "pafos_29": {
@@ -369,7 +324,6 @@ PRODUCTS = {
         "category": "pafos",
         "name": "PAFOS 20000 - Дикие Ягоды",
         "description": "Вкус: Дикие ягоды\n20000 тяг · 2 режима мощности · 22мл",
-        "price": 300,
         "photo": "https://static.tildacdn.com/tild3834-3132-4964-b139-663361396666/xb30_wild_berries_1.png",
     },
     "pafos_30": {
@@ -377,7 +331,6 @@ PRODUCTS = {
         "category": "pafos",
         "name": "PAFOS 20000 - Ягодный Йогурт",
         "description": "Вкус: Ягодный йогурт\n20000 тяг · 2 режима мощности · 22мл",
-        "price": 300,
         "photo": "https://static.tildacdn.com/tild3430-6530-4463-b632-323439613038/xb30_berry_yogurt.png",
     },
     "pafos_31": {
@@ -385,7 +338,6 @@ PRODUCTS = {
         "category": "pafos",
         "name": "PAFOS 20000 - Мята Ментол Эвкалипт",
         "description": "Вкус: Мята ментол эвкалипт\n20000 тяг · 2 режима мощности · 22мл",
-        "price": 300,
         "photo": "https://static.tildacdn.com/tild6261-6166-4161-b631-336438363330/xb30_mint_menthol_eu.png",
     },
     "pafos_32": {
@@ -393,7 +345,6 @@ PRODUCTS = {
         "category": "pafos",
         "name": "PAFOS 20000 - Киви Лимон",
         "description": "Вкус: Киви лимон\n20000 тяг · 2 режима мощности · 22мл",
-        "price": 300,
         "photo": "https://static.tildacdn.com/tild6464-3161-4539-a231-633231366566/xb30_kiwi_lemon.png",
     },
     "pafos_33": {
@@ -401,7 +352,6 @@ PRODUCTS = {
         "category": "pafos",
         "name": "PAFOS 20000 - Мультифрукт",
         "description": "Вкус: Мультифрукт\n20000 тяг · 2 режима мощности · 22мл",
-        "price": 300,
         "photo": "https://static.tildacdn.com/tild6433-3066-4335-b063-393239653236/xb30_miltifruit.png",
     },
     "pafos_34": {
@@ -409,7 +359,6 @@ PRODUCTS = {
         "category": "pafos",
         "name": "PAFOS 20000 - Вишня Кола",
         "description": "Вкус: Вишня кола\n20000 тяг · 2 режима мощности · 22мл",
-        "price": 300,
         "photo": "https://static.tildacdn.com/tild6538-3461-4261-a364-386666633262/xb30_cherry_cola.png",
     },
     "pafos_35": {
@@ -417,19 +366,140 @@ PRODUCTS = {
         "category": "pafos",
         "name": "PAFOS 20000 - Мятный Чай",
         "description": "Вкус: Мятный чай\n20000 тяг · 2 режима мощности · 22мл",
-        "price": 300,
         "photo": "https://static.tildacdn.com/tild3631-6364-4331-b231-356537626364/xb30_mint_tea.png",
     },
+
+    # -- PUFFMI Mosh 40000
+    "puffmi_1": {
+        "id": "puffmi_1",
+        "category": "puffmi",
+        "name": "PUFFMI 40000 - Клубника Киви",
+        "description": "Вкус: Клубника киви\n40000 тяг · 24мл · Дисплей · Солевой никотин 20мг",
+        "photo": "https://mostabaktorg.moscow/image/cache/catalog/products/puffmi-mosh-40000-klubnika-kivi-500x500-product_popup.jpg",
+    },
+    "puffmi_2": {
+        "id": "puffmi_2",
+        "category": "puffmi",
+        "name": "PUFFMI 40000 - Лесные Ягоды Клубника",
+        "description": "Вкус: Лесные ягоды клубника\n40000 тяг · 24мл · Дисплей · Солевой никотин 20мг",
+        "photo": "https://mostabaktorg.moscow/image/cache/catalog/products/puffmi-mosh-40000-lesnye-yagody-klubnika-500x500-product_popup.jpg",
+    },
+    "puffmi_3": {
+        "id": "puffmi_3",
+        "category": "puffmi",
+        "name": "PUFFMI 40000 - Кислый Ананас",
+        "description": "Вкус: Кислый ананас\n40000 тяг · 24мл · Дисплей · Солевой никотин 20мг",
+        "photo": "https://mostabaktorg.moscow/image/cache/catalog/products/puffmi-mosh-40000-kislyj-ananas-500x500-product_popup.jpg",
+    },
+    "puffmi_4": {
+        "id": "puffmi_4",
+        "category": "puffmi",
+        "name": "PUFFMI 40000 - Черешня",
+        "description": "Вкус: Черешня\n40000 тяг · 24мл · Дисплей · Солевой никотин 20мг",
+        "photo": "https://mostabaktorg.moscow/image/cache/catalog/products/puffmi-mosh-40000-chereshnya-500x500-product_popup.jpg",
+    },
+    "puffmi_5": {
+        "id": "puffmi_5",
+        "category": "puffmi",
+        "name": "PUFFMI 40000 - Апельсин Киви",
+        "description": "Вкус: Апельсин киви\n40000 тяг · 24мл · Дисплей · Солевой никотин 20мг",
+        "photo": "https://mostabaktorg.moscow/image/cache/catalog/products/puffmi-mosh-40000-apelsin-kivi-500x500-product_popup.jpg",
+    },
+    "puffmi_6": {
+        "id": "puffmi_6",
+        "category": "puffmi",
+        "name": "PUFFMI 40000 - Мятный Лайм",
+        "description": "Вкус: Мятный лайм\n40000 тяг · 24мл · Дисплей · Солевой никотин 20мг",
+        "photo": "https://mostabaktorg.moscow/image/cache/catalog/products/puffmi-mosh-40000-soda-chernaya-smorodina-500x500-product_popup.jpg",
+    },
+    "puffmi_7": {
+        "id": "puffmi_7",
+        "category": "puffmi",
+        "name": "PUFFMI 40000 - Лимонная Содовая Маракуйя",
+        "description": "Вкус: Лимонная содовая маракуйя\n40000 тяг · 24мл · Дисплей · Солевой никотин 20мг",
+        "photo": "https://mostabaktorg.moscow/image/cache/catalog/products/puffmi-mosh-40000-marakujya-limonnaya-sodovaya-500x500-product_popup.jpg",
+    },
+    "puffmi_8": {
+        "id": "puffmi_8",
+        "category": "puffmi",
+        "name": "PUFFMI 40000 - Яблоко Персик",
+        "description": "Вкус: Яблоко персик\n40000 тяг · 24мл · Дисплей · Солевой никотин 20мг",
+        "photo": "https://mostabaktorg.moscow/image/cache/catalog/products/puffmi-mosh-40000-yabloko-persik-500x500-product_popup.jpg",
+    },
+    "puffmi_9": {
+        "id": "puffmi_9",
+        "category": "puffmi",
+        "name": "PUFFMI 40000 - Ежевика Сода",
+        "description": "Вкус: Ежевика сода\n40000 тяг · 24мл · Дисплей · Солевой никотин 20мг",
+        "photo": "https://mostabaktorg.moscow/image/cache/catalog/products/puffmi-mosh-40000-soda-chernaya-smorodina-500x500-product_popup.jpg",
+    },
+    "puffmi_10": {
+        "id": "puffmi_10",
+        "category": "puffmi",
+        "name": "PUFFMI 40000 - Ледяная Мята",
+        "description": "Вкус: Ледяная мята\n40000 тяг · 24мл · Дисплей · Солевой никотин 20мг",
+        "photo": "https://mostabaktorg.moscow/image/cache/catalog/products/puffmi-mosh-40000-ledyanaya-myata-500x500-product_popup.jpg",
+    },
+    "puffmi_11": {
+        "id": "puffmi_11",
+        "category": "puffmi",
+        "name": "PUFFMI 40000 - Клубника Арбуз",
+        "description": "Вкус: Клубника арбуз\n40000 тяг · 24мл · Дисплей · Солевой никотин 20мг",
+        "photo": "https://mostabaktorg.moscow/image/cache/catalog/products/puffmi-mosh-40000-klubnika-arbuz-500x500-product_popup.jpg",
+    },
+    "puffmi_12": {
+        "id": "puffmi_12",
+        "category": "puffmi",
+        "name": "PUFFMI 40000 - Черника Малина",
+        "description": "Вкус: Черника малина\n40000 тяг · 24мл · Дисплей · Солевой никотин 20мг",
+        "photo": "https://mostabaktorg.moscow/image/cache/catalog/products/puffmi-mosh-40000-chernika-malina-500x500-product_popup.jpg",
+    },
+    "puffmi_13": {
+        "id": "puffmi_13",
+        "category": "puffmi",
+        "name": "PUFFMI 40000 - Вишня Лимон",
+        "description": "Вкус: Вишня лимон\n40000 тяг · 24мл · Дисплей · Солевой никотин 20мг",
+        "photo": "https://mostabaktorg.moscow/image/cache/catalog/products/puffmi-mosh-40000-vishnya-limon-500x500-product_popup.jpg",
+    },
+    "puffmi_14": {
+        "id": "puffmi_14",
+        "category": "puffmi",
+        "name": "PUFFMI 40000 - Красный Грейпфрут",
+        "description": "Вкус: Красный грейпфрут\n40000 тяг · 24мл · Дисплей · Солевой никотин 20мг",
+        "photo": "https://mostabaktorg.moscow/image/cache/catalog/products/puffmi-mosh-40000-krasnyj-grejpfrut-500x500-product_popup.jpg",
+    },
+    "puffmi_15": {
+        "id": "puffmi_15",
+        "category": "puffmi",
+        "name": "PUFFMI 40000 - Сода Черная Смородина",
+        "description": "Вкус: Сода черная смородина\n40000 тяг · 24мл · Дисплей · Солевой никотин 20мг",
+        "photo": "https://mostabaktorg.moscow/image/cache/catalog/products/puffmi-mosh-40000-soda-chernaya-smorodina-500x500-product_popup.jpg",
+    },
+    "puffmi_16": {
+        "id": "puffmi_16",
+        "category": "puffmi",
+        "name": "PUFFMI 40000 - Клюква Виноград",
+        "description": "Вкус: Клюква виноград\n40000 тяг · 24мл · Дисплей · Солевой никотин 20мг",
+        "photo": "https://mostabaktorg.moscow/image/cache/catalog/products/puffmi-mosh-40000-klyukva-vinograd-500x500-product_popup.jpg",
+    },
+    "puffmi_17": {
+        "id": "puffmi_17",
+        "category": "puffmi",
+        "name": "PUFFMI 40000 - Лаймовая Мята",
+        "description": "Вкус: Лаймовая мята\n40000 тяг · 24мл · Дисплей · Солевой никотин 20мг",
+        "photo": "https://mostabaktorg.moscow/image/cache/catalog/products/puffmi-mosh-40000-lajmovaya-myata-500x500-product_popup.jpg",
+    },
 }
- 
+
 CATEGORIES = {
     "waka": "💨 WAKA soPro 20000",
     "pafos": "💨 PAFOS 20000",
+    "puffmi": "💨 PUFFMI Mosh 40000",
     "snus": "🐂 D.L.T.A. Red Bull Edition",
 }
- 
+
 def get_by_category(category: str) -> list:
     return [p for p in PRODUCTS.values() if p["category"] == category]
- 
+
 def get_product(product_id: str) -> dict | None:
     return PRODUCTS.get(product_id)
