@@ -1,5 +1,5 @@
 PRODUCTS = {
-    # ── D.L.T.A. Red Bull Edition ─────────────────────────────
+    # -- D.L.T.A. Red Bull Edition
     "dlta_1": {
         "id": "dlta_1",
         "category": "snus",
@@ -56,11 +56,11 @@ PRODUCTS = {
         "price": 200,
         "photo": "https://nico-kz1.com/wp-content/uploads/2025/10/NICOKAZ-SNUS-DLTA-pink.jpg",
     },
-
-    # ── WAKA soPro 20000 EXTRA ────────────────────────────────
+ 
+    # -- WAKA soPro 20000
     "waka_1": {
         "id": "waka_1",
-        "category": "vapes",
+        "category": "waka",
         "name": "WAKA 20000 - Арбузная Жвачка",
         "description": "Вкус: Арбузная жвачка\n20000 тяг · Смарт-экран · Быстрая зарядка",
         "price": 300,
@@ -68,7 +68,7 @@ PRODUCTS = {
     },
     "waka_2": {
         "id": "waka_2",
-        "category": "vapes",
+        "category": "waka",
         "name": "WAKA 20000 - Вишнёвая Кола",
         "description": "Вкус: Вишнёвая кола\n20000 тяг · Смарт-экран · Быстрая зарядка",
         "price": 300,
@@ -76,7 +76,7 @@ PRODUCTS = {
     },
     "waka_3": {
         "id": "waka_3",
-        "category": "vapes",
+        "category": "waka",
         "name": "WAKA 20000 - Газированная Вишня Лайм",
         "description": "Вкус: Газированная вишня лайм\n20000 тяг · Смарт-экран · Быстрая зарядка",
         "price": 300,
@@ -84,7 +84,7 @@ PRODUCTS = {
     },
     "waka_4": {
         "id": "waka_4",
-        "category": "vapes",
+        "category": "waka",
         "name": "WAKA 20000 - Двойное Кислое Яблоко",
         "description": "Вкус: Двойное кислое яблоко\n20000 тяг · Смарт-экран · Быстрая зарядка",
         "price": 300,
@@ -92,7 +92,7 @@ PRODUCTS = {
     },
     "waka_5": {
         "id": "waka_5",
-        "category": "vapes",
+        "category": "waka",
         "name": "WAKA 20000 - Киви Лимон",
         "description": "Вкус: Киви лимон\n20000 тяг · Смарт-экран · Быстрая зарядка",
         "price": 300,
@@ -100,7 +100,7 @@ PRODUCTS = {
     },
     "waka_6": {
         "id": "waka_6",
-        "category": "vapes",
+        "category": "waka",
         "name": "WAKA 20000 - Морская Соль Лимонная Конфета",
         "description": "Вкус: Морская соль лимонная конфета\n20000 тяг · Смарт-экран · Быстрая зарядка",
         "price": 300,
@@ -108,7 +108,7 @@ PRODUCTS = {
     },
     "waka_7": {
         "id": "waka_7",
-        "category": "vapes",
+        "category": "waka",
         "name": "WAKA 20000 - Черника Малина Лимон",
         "description": "Вкус: Черника малина лимон\n20000 тяг · Смарт-экран · Быстрая зарядка",
         "price": 300,
@@ -116,7 +116,7 @@ PRODUCTS = {
     },
     "waka_8": {
         "id": "waka_8",
-        "category": "vapes",
+        "category": "waka",
         "name": "WAKA 20000 - Черничный Энергетик",
         "description": "Вкус: Черничный энергетик\n20000 тяг · Смарт-экран · Быстрая зарядка",
         "price": 300,
@@ -124,7 +124,7 @@ PRODUCTS = {
     },
     "waka_9": {
         "id": "waka_9",
-        "category": "vapes",
+        "category": "waka",
         "name": "WAKA 20000 - Чупа-чупс Клубника Малина",
         "description": "Вкус: Чупа-чупс клубника малина\n20000 тяг · Смарт-экран · Быстрая зарядка",
         "price": 300,
@@ -132,17 +132,17 @@ PRODUCTS = {
     },
     "waka_10": {
         "id": "waka_10",
-        "category": "vapes",
+        "category": "waka",
         "name": "WAKA 20000 - Чупа-чупс Яблоко",
         "description": "Вкус: Чупа-чупс яблоко\n20000 тяг · Смарт-экран · Быстрая зарядка",
         "price": 300,
         "photo": "https://cis.wakavaping.com/cdn/shop/files/f5e585bcac5d2759413e72dd48b1c499.png?v=1759207730",
     },
-
-    # ── PAFOS 20000 ───────────────────────────────────────────
+ 
+    # -- PAFOS 20000
     "pafos_1": {
         "id": "pafos_1",
-        "category": "vapes",
+        "category": "pafos",
         "name": "PAFOS 20000 - Ежевика Содовая",
         "description": "Вкус: Ежевика содовая\n20000 тяг · 2 режима мощности · 22мл",
         "price": 300,
@@ -150,7 +150,7 @@ PRODUCTS = {
     },
     "pafos_2": {
         "id": "pafos_2",
-        "category": "vapes",
+        "category": "pafos",
         "name": "PAFOS 20000 - Черная Смородина Содовая",
         "description": "Вкус: Черная смородина содовая\n20000 тяг · 2 режима мощности · 22мл",
         "price": 300,
@@ -158,7 +158,7 @@ PRODUCTS = {
     },
     "pafos_3": {
         "id": "pafos_3",
-        "category": "vapes",
+        "category": "pafos",
         "name": "PAFOS 20000 - Голубика Облепиха Клюква",
         "description": "Вкус: Голубика облепиха клюква\n20000 тяг · 2 режима мощности · 22мл",
         "price": 300,
@@ -166,7 +166,7 @@ PRODUCTS = {
     },
     "pafos_4": {
         "id": "pafos_4",
-        "category": "vapes",
+        "category": "pafos",
         "name": "PAFOS 20000 - Голубика Содовая",
         "description": "Вкус: Голубика содовая\n20000 тяг · 2 режима мощности · 22мл",
         "price": 300,
@@ -174,7 +174,7 @@ PRODUCTS = {
     },
     "pafos_5": {
         "id": "pafos_5",
-        "category": "vapes",
+        "category": "pafos",
         "name": "PAFOS 20000 - Карамбола",
         "description": "Вкус: Карамбола\n20000 тяг · 2 режима мощности · 22мл",
         "price": 300,
@@ -182,7 +182,7 @@ PRODUCTS = {
     },
     "pafos_6": {
         "id": "pafos_6",
-        "category": "vapes",
+        "category": "pafos",
         "name": "PAFOS 20000 - Габба Киви Алоэ",
         "description": "Вкус: Габба киви алоэ\n20000 тяг · 2 режима мощности · 22мл",
         "price": 300,
@@ -190,7 +190,7 @@ PRODUCTS = {
     },
     "pafos_7": {
         "id": "pafos_7",
-        "category": "vapes",
+        "category": "pafos",
         "name": "PAFOS 20000 - Айс Бейби",
         "description": "Вкус: Айс бейби\n20000 тяг · 2 режима мощности · 22мл",
         "price": 300,
@@ -198,7 +198,7 @@ PRODUCTS = {
     },
     "pafos_8": {
         "id": "pafos_8",
-        "category": "vapes",
+        "category": "pafos",
         "name": "PAFOS 20000 - Ананас Личи",
         "description": "Вкус: Ананас личи\n20000 тяг · 2 режима мощности · 22мл",
         "price": 300,
@@ -206,7 +206,7 @@ PRODUCTS = {
     },
     "pafos_9": {
         "id": "pafos_9",
-        "category": "vapes",
+        "category": "pafos",
         "name": "PAFOS 20000 - Гранат Лайм Содовая",
         "description": "Вкус: Гранат лайм содовая\n20000 тяг · 2 режима мощности · 22мл",
         "price": 300,
@@ -214,7 +214,7 @@ PRODUCTS = {
     },
     "pafos_10": {
         "id": "pafos_10",
-        "category": "vapes",
+        "category": "pafos",
         "name": "PAFOS 20000 - Сицилийский Апельсин Клубника",
         "description": "Вкус: Сицилийский апельсин клубника\n20000 тяг · 2 режима мощности · 22мл",
         "price": 300,
@@ -222,7 +222,7 @@ PRODUCTS = {
     },
     "pafos_11": {
         "id": "pafos_11",
-        "category": "vapes",
+        "category": "pafos",
         "name": "PAFOS 20000 - Ягодный Скитлс",
         "description": "Вкус: Ягодный скитлс\n20000 тяг · 2 режима мощности · 22мл",
         "price": 300,
@@ -230,7 +230,7 @@ PRODUCTS = {
     },
     "pafos_12": {
         "id": "pafos_12",
-        "category": "vapes",
+        "category": "pafos",
         "name": "PAFOS 20000 - Клубника Киви Лимон",
         "description": "Вкус: Клубника киви лимон\n20000 тяг · 2 режима мощности · 22мл",
         "price": 300,
@@ -238,7 +238,7 @@ PRODUCTS = {
     },
     "pafos_13": {
         "id": "pafos_13",
-        "category": "vapes",
+        "category": "pafos",
         "name": "PAFOS 20000 - Кактус Лимон",
         "description": "Вкус: Кактус лимон\n20000 тяг · 2 режима мощности · 22мл",
         "price": 300,
@@ -246,7 +246,7 @@ PRODUCTS = {
     },
     "pafos_14": {
         "id": "pafos_14",
-        "category": "vapes",
+        "category": "pafos",
         "name": "PAFOS 20000 - Тропический",
         "description": "Вкус: Тропический\n20000 тяг · 2 режима мощности · 22мл",
         "price": 300,
@@ -254,7 +254,7 @@ PRODUCTS = {
     },
     "pafos_15": {
         "id": "pafos_15",
-        "category": "vapes",
+        "category": "pafos",
         "name": "PAFOS 20000 - Грейпфрут",
         "description": "Вкус: Грейпфрут\n20000 тяг · 2 режима мощности · 22мл",
         "price": 300,
@@ -262,7 +262,7 @@ PRODUCTS = {
     },
     "pafos_16": {
         "id": "pafos_16",
-        "category": "vapes",
+        "category": "pafos",
         "name": "PAFOS 20000 - Экзотический",
         "description": "Вкус: Экзотический\n20000 тяг · 2 режима мощности · 22мл",
         "price": 300,
@@ -270,7 +270,7 @@ PRODUCTS = {
     },
     "pafos_17": {
         "id": "pafos_17",
-        "category": "vapes",
+        "category": "pafos",
         "name": "PAFOS 20000 - Яблочный Леденец",
         "description": "Вкус: Яблочный леденец\n20000 тяг · 2 режима мощности · 22мл",
         "price": 300,
@@ -278,7 +278,7 @@ PRODUCTS = {
     },
     "pafos_18": {
         "id": "pafos_18",
-        "category": "vapes",
+        "category": "pafos",
         "name": "PAFOS 20000 - Клюква Содовая",
         "description": "Вкус: Клюква содовая\n20000 тяг · 2 режима мощности · 22мл",
         "price": 300,
@@ -286,7 +286,7 @@ PRODUCTS = {
     },
     "pafos_19": {
         "id": "pafos_19",
-        "category": "vapes",
+        "category": "pafos",
         "name": "PAFOS 20000 - Вишня Лимон",
         "description": "Вкус: Вишня лимон\n20000 тяг · 2 режима мощности · 22мл",
         "price": 300,
@@ -294,7 +294,7 @@ PRODUCTS = {
     },
     "pafos_20": {
         "id": "pafos_20",
-        "category": "vapes",
+        "category": "pafos",
         "name": "PAFOS 20000 - Черника Малина Лимон",
         "description": "Вкус: Черника малина лимон\n20000 тяг · 2 режима мощности · 22мл",
         "price": 300,
@@ -302,7 +302,7 @@ PRODUCTS = {
     },
     "pafos_21": {
         "id": "pafos_21",
-        "category": "vapes",
+        "category": "pafos",
         "name": "PAFOS 20000 - Клубника Арбуз",
         "description": "Вкус: Клубника арбуз\n20000 тяг · 2 режима мощности · 22мл",
         "price": 300,
@@ -310,7 +310,7 @@ PRODUCTS = {
     },
     "pafos_22": {
         "id": "pafos_22",
-        "category": "vapes",
+        "category": "pafos",
         "name": "PAFOS 20000 - Мармеладные Мишки",
         "description": "Вкус: Мармеладные мишки\n20000 тяг · 2 режима мощности · 22мл",
         "price": 300,
@@ -318,7 +318,7 @@ PRODUCTS = {
     },
     "pafos_23": {
         "id": "pafos_23",
-        "category": "vapes",
+        "category": "pafos",
         "name": "PAFOS 20000 - Клюква Виноград",
         "description": "Вкус: Клюква виноград\n20000 тяг · 2 режима мощности · 22мл",
         "price": 300,
@@ -326,7 +326,7 @@ PRODUCTS = {
     },
     "pafos_24": {
         "id": "pafos_24",
-        "category": "vapes",
+        "category": "pafos",
         "name": "PAFOS 20000 - Кокосовое Мороженое",
         "description": "Вкус: Кокосовое мороженое\n20000 тяг · 2 режима мощности · 22мл",
         "price": 300,
@@ -334,7 +334,7 @@ PRODUCTS = {
     },
     "pafos_25": {
         "id": "pafos_25",
-        "category": "vapes",
+        "category": "pafos",
         "name": "PAFOS 20000 - Сладкая Мята",
         "description": "Вкус: Сладкая мята\n20000 тяг · 2 режима мощности · 22мл",
         "price": 300,
@@ -342,7 +342,7 @@ PRODUCTS = {
     },
     "pafos_26": {
         "id": "pafos_26",
-        "category": "vapes",
+        "category": "pafos",
         "name": "PAFOS 20000 - Лимончелло",
         "description": "Вкус: Лимончелло\n20000 тяг · 2 режима мощности · 22мл",
         "price": 300,
@@ -350,7 +350,7 @@ PRODUCTS = {
     },
     "pafos_27": {
         "id": "pafos_27",
-        "category": "vapes",
+        "category": "pafos",
         "name": "PAFOS 20000 - Кофеин",
         "description": "Вкус: Кофеин\n20000 тяг · 2 режима мощности · 22мл",
         "price": 300,
@@ -358,7 +358,7 @@ PRODUCTS = {
     },
     "pafos_28": {
         "id": "pafos_28",
-        "category": "vapes",
+        "category": "pafos",
         "name": "PAFOS 20000 - Двойное Яблоко",
         "description": "Вкус: Двойное яблоко\n20000 тяг · 2 режима мощности · 22мл",
         "price": 300,
@@ -366,7 +366,7 @@ PRODUCTS = {
     },
     "pafos_29": {
         "id": "pafos_29",
-        "category": "vapes",
+        "category": "pafos",
         "name": "PAFOS 20000 - Дикие Ягоды",
         "description": "Вкус: Дикие ягоды\n20000 тяг · 2 режима мощности · 22мл",
         "price": 300,
@@ -374,7 +374,7 @@ PRODUCTS = {
     },
     "pafos_30": {
         "id": "pafos_30",
-        "category": "vapes",
+        "category": "pafos",
         "name": "PAFOS 20000 - Ягодный Йогурт",
         "description": "Вкус: Ягодный йогурт\n20000 тяг · 2 режима мощности · 22мл",
         "price": 300,
@@ -382,7 +382,7 @@ PRODUCTS = {
     },
     "pafos_31": {
         "id": "pafos_31",
-        "category": "vapes",
+        "category": "pafos",
         "name": "PAFOS 20000 - Мята Ментол Эвкалипт",
         "description": "Вкус: Мята ментол эвкалипт\n20000 тяг · 2 режима мощности · 22мл",
         "price": 300,
@@ -390,7 +390,7 @@ PRODUCTS = {
     },
     "pafos_32": {
         "id": "pafos_32",
-        "category": "vapes",
+        "category": "pafos",
         "name": "PAFOS 20000 - Киви Лимон",
         "description": "Вкус: Киви лимон\n20000 тяг · 2 режима мощности · 22мл",
         "price": 300,
@@ -398,7 +398,7 @@ PRODUCTS = {
     },
     "pafos_33": {
         "id": "pafos_33",
-        "category": "vapes",
+        "category": "pafos",
         "name": "PAFOS 20000 - Мультифрукт",
         "description": "Вкус: Мультифрукт\n20000 тяг · 2 режима мощности · 22мл",
         "price": 300,
@@ -406,7 +406,7 @@ PRODUCTS = {
     },
     "pafos_34": {
         "id": "pafos_34",
-        "category": "vapes",
+        "category": "pafos",
         "name": "PAFOS 20000 - Вишня Кола",
         "description": "Вкус: Вишня кола\n20000 тяг · 2 режима мощности · 22мл",
         "price": 300,
@@ -414,21 +414,22 @@ PRODUCTS = {
     },
     "pafos_35": {
         "id": "pafos_35",
-        "category": "vapes",
+        "category": "pafos",
         "name": "PAFOS 20000 - Мятный Чай",
         "description": "Вкус: Мятный чай\n20000 тяг · 2 режима мощности · 22мл",
         "price": 300,
         "photo": "https://static.tildacdn.com/tild3631-6364-4331-b231-356537626364/xb30_mint_tea.png",
     },
 }
-
+ 
 CATEGORIES = {
-    "vapes": "💨 Электронные сигареты",
-    "snus":  "🐂 D.L.T.A. Red Bull Edition",
+    "waka": "💨 WAKA soPro 20000",
+    "pafos": "💨 PAFOS 20000",
+    "snus": "🐂 D.L.T.A. Red Bull Edition",
 }
-
+ 
 def get_by_category(category: str) -> list:
     return [p for p in PRODUCTS.values() if p["category"] == category]
-
+ 
 def get_product(product_id: str) -> dict | None:
     return PRODUCTS.get(product_id)
