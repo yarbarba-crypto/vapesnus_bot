@@ -35,7 +35,7 @@ def category_kb(category: str) -> InlineKeyboardMarkup:
     builder = InlineKeyboardBuilder()
     for p in get_by_category(category):
         name = p["name"].split(" - ")[1] if " - " in p["name"] else p["name"]
-builder.button(text=name, callback_data=f"product:{p['id']}")
+        builder.button(text=name, callback_data=f"product:{p['id']}")
     if category in ["waka", "pafos", "puffmi"]:
         builder.button(text="🔙 Назад", callback_data="menu:vapes")
     elif category in ["snus", "odens"]:
