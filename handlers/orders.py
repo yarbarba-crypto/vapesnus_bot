@@ -1,89 +1,73 @@
 from aiogram import Router, F, Bot
-from aiogram.types import (
-    CallbackQuery, Message,
-    LabeledPrice, PreCheckoutQuery
-)
+from aiogram.types import CallbackQuery, Message
 from aiogram.fsm.context import FSMContext
+from aiogram.fsm.state import State, StatesGroup
+from aiogram.filters import StateFilter
+from keyboards import admin_reply_kb, main_menu_kb
 from products import get_product
 from config import ADMIN_IDS
 
 router = Router()
 
 
-def get_cart(data: dict) -> dict:
-    return data.get("cart", {})
+class AdminReply(StatesGroup):
+    waiting = State()
 
 
-@router.callback_query(F.data == "order:pay")
-async def send_invoice(callback: CallbackQuery, state: FSMContext, bot: Bot):
-    data = await state.get_data()
-    cart = get_cart(data)
-    if not cart:
-        await callback.answer("Корзина пуста!", show_alert=True)
+@router.callback_query(F.data.startswith("order:"))
+async def leave_order(callback: CallbackQuery, bot: Bot):
+    product_id = callback.data.split(":")[1]
+    product = get_product(product_id)
+    if not product:
+        await callback.answer("Товар не найден.", show_alert=True)
         return
 
-    prices = []
-    description_lines = []
-    for product_id, qty in cart.items():
-        p = get_product(product_id)
-        if p:
-            prices.append(LabeledPrice(label=f"{p['name']} × {qty}", amount=p["price"] * qty))
-            description_lines.append(f"{p['name']} × {qty}")
+    user = callback.from_user
+    text = (
+        f"📝 *Новая заявка!*\n\n"
+        f"👤 [{user.full_name}](tg://user?id={user.id})\n"
+        f"🆔 ID: `{user.id}`\n\n"
+        f"🛍 Товар: *{product['name']}*"
+    )
 
-    description = "\n".join(description_lines)
+    for admin_id in ADMIN_IDS:
+        try:
+            await bot.send_message(
+                admin_id,
+                text,
+                parse_mode="Markdown",
+                reply_markup=admin_reply_kb(user.id)
+            )
+        except Exception:
+            pass
 
-    await bot.send_invoice(
-        chat_id=callback.from_user.id,
-        title="Ваш заказ",
-        description=description,
-        payload="order_payload",
-        currency="XTR",
-        prices=prices,
-        provider_token="",
+    await callback.message.answer(
+        "✅ Ваша заявка отправлена!\n\n"
+        "Мы свяжемся с вами в ближайшее время.",
+        reply_markup=main_menu_kb()
     )
     await callback.answer()
 
 
-@router.pre_checkout_query()
-async def pre_checkout(pre_checkout_query: PreCheckoutQuery):
-    await pre_checkout_query.answer(ok=True)
+@router.callback_query(F.data.startswith("reply:"))
+async def cb_reply(callback: CallbackQuery, state: FSMContext):
+    await state.clear()
+    user_id = int(callback.data.split(":")[1])
+    await state.update_data(reply_to=user_id)
+    await state.set_state(AdminReply.waiting)
+    await callback.message.answer("✏️ Напишите ответ покупателю:")
+    await callback.answer()
 
 
-@router.message(F.successful_payment)
-async def successful_payment(message: Message, state: FSMContext, bot: Bot):
+@router.message(StateFilter(AdminReply.waiting))
+async def send_reply(message: Message, state: FSMContext, bot: Bot):
     data = await state.get_data()
-    cart = get_cart(data)
-    payment = message.successful_payment
-
-    lines = []
-    for product_id, qty in cart.items():
-        p = get_product(product_id)
-        if p:
-            lines.append(f"• {p['name']} × {qty}")
-
-    order_text = "\n".join(lines)
-    stars_paid = payment.total_amount
-
-    await message.answer(
-        f"✅ *Оплата получена! Спасибо за заказ!*\n\n"
-        f"💫 Оплачено: {stars_paid} звёзд\n\n"
-        f"*Ваш заказ:*\n{order_text}\n\n"
-        f"Мы обработаем ваш заказ и свяжемся с вами для уточнения деталей доставки.",
-        parse_mode="Markdown"
-    )
-
-    user = message.from_user
-    admin_text = (
-        f"🛍 *Новый заказ!*\n\n"
-        f"👤 Покупатель: [{user.full_name}](tg://user?id={user.id})\n"
-        f"🆔 ID: `{user.id}`\n"
-        f"💫 Оплачено: {stars_paid} звёзд\n\n"
-        f"*Товары:*\n{order_text}"
-    )
-    for admin_id in ADMIN_IDS:
-        try:
-            await bot.send_message(admin_id, admin_text, parse_mode="Markdown")
-        except Exception:
-            pass
-
-    await state.update_data(cart={})
+    user_id = data.get("reply_to")
+    await state.clear()
+    if user_id:
+        await bot.send_message(
+            user_id,
+            f"💬 *Ответ от магазина:*\n\n{message.text}",
+            parse_mode="Markdown"
+        )
+        await message.answer("✅ Ответ отправлен!")
