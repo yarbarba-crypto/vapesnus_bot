@@ -4,7 +4,7 @@ from aiogram import Bot, Dispatcher
 from aiogram.fsm.storage.memory import MemoryStorage
 
 from config import BOT_TOKEN
-from handlers import catalog, cart, orders, admin, start, support
+from handlers import catalog, orders, admin, start, support
 
 logging.basicConfig(level=logging.INFO)
 
@@ -14,7 +14,6 @@ async def main():
 
     dp.include_router(start.router)
     dp.include_router(catalog.router)
-    dp.include_router(cart.router)
     dp.include_router(orders.router)
     dp.include_router(admin.router)
     dp.include_router(support.router)
