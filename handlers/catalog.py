@@ -43,6 +43,7 @@ async def show_category(callback: CallbackQuery):
         "waka": "💨 WAKA soPro 20000",
         "pafos": "💨 PAFOS 20000",
         "puffmi": "💨 PUFFMI Mosh 40000",
+        "lostmary": "💨 Lost Mary MO20000 PRO",
         "snus": "🐂 D.L.T.A. Red Bull Edition",
         "odens": "🇸🇪 Oden's (Швеция)",
     }
