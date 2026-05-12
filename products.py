@@ -50,6 +50,15 @@ PRODUCTS = {
         "photo": "https://nico-kz1.com/wp-content/uploads/2025/10/NICOKAZ-SNUS-DLTA-pink.jpg",
     },
 
+    # -- Oden's (Швеция)
+    "odens_1": {
+        "id": "odens_1",
+        "category": "odens",
+        "name": "Oden's - Cold Dry Extreme White",
+        "description": "Вкус: Холодная мята\nШведский снюс · Extreme White · Portion Dry · Made in Sweden",
+        "photo": "https://snusmarket.com/image/cache/catalog/products/odens/odens-cold-dry-extreme-white-portion-800x800.jpg",
+    },
+
     # -- WAKA soPro 20000
     "waka_1": {
         "id": "waka_1",
@@ -489,13 +498,157 @@ PRODUCTS = {
         "description": "Вкус: Лаймовая мята\n40000 тяг · 24мл · Дисплей · Солевой никотин 20мг",
         "photo": "https://mostabaktorg.moscow/image/cache/catalog/products/puffmi-mosh-40000-lajmovaya-myata-500x500-product_popup.jpg",
     },
+
+    # -- Lost Mary MO20000 PRO
+    "lostmary_1": {
+        "id": "lostmary_1",
+        "category": "lostmary",
+        "name": "Lost Mary 20000 - Черная Вишня Байя Всплеск",
+        "description": "Вкус: Черная вишня байя всплеск\n20000 тяг · Мега-экран · 13-25W · Type-C",
+        "photo": "https://d3eye3cs3prop8.cloudfront.net/products/mo20000Pro/p8/p8-1.jpg",
+    },
+    "lostmary_2": {
+        "id": "lostmary_2",
+        "category": "lostmary",
+        "name": "Lost Mary 20000 - Ледяная Мята",
+        "description": "Вкус: Ледяная мята\n20000 тяг · Мега-экран · 13-25W · Type-C",
+        "photo": "https://d3eye3cs3prop8.cloudfront.net/products/mo20000Pro/p8/p8-2.jpg",
+    },
+    "lostmary_3": {
+        "id": "lostmary_3",
+        "category": "lostmary",
+        "name": "Lost Mary 20000 - Ледяной Чай",
+        "description": "Вкус: Ледяной чай\n20000 тяг · Мега-экран · 13-25W · Type-C",
+        "photo": "https://d3eye3cs3prop8.cloudfront.net/products/mo20000Pro/p8/p8-3.jpg",
+    },
+    "lostmary_4": {
+        "id": "lostmary_4",
+        "category": "lostmary",
+        "name": "Lost Mary 20000 - Кислый Ананас Лед",
+        "description": "Вкус: Кислый ананас лед\n20000 тяг · Мега-экран · 13-25W · Type-C",
+        "photo": "https://d3eye3cs3prop8.cloudfront.net/products/mo20000Pro/p8/p8-4.jpg",
+    },
+    "lostmary_5": {
+        "id": "lostmary_5",
+        "category": "lostmary",
+        "name": "Lost Mary 20000 - Арбуз Вишня",
+        "description": "Вкус: Арбуз вишня\n20000 тяг · Мега-экран · 13-25W · Type-C",
+        "photo": "https://d3eye3cs3prop8.cloudfront.net/products/mo20000Pro/p8/p8-5.jpg",
+    },
+    "lostmary_6": {
+        "id": "lostmary_6",
+        "category": "lostmary",
+        "name": "Lost Mary 20000 - Черника Малина Лед",
+        "description": "Вкус: Черника малина лед\n20000 тяг · Мега-экран · 13-25W · Type-C",
+        "photo": "https://d3eye3cs3prop8.cloudfront.net/products/mo20000Pro/p8/p8-6.jpg",
+    },
+    "lostmary_7": {
+        "id": "lostmary_7",
+        "category": "lostmary",
+        "name": "Lost Mary 20000 - Зеленое Яблоко Маракуйя Киви",
+        "description": "Вкус: Зеленое яблоко маракуйя киви\n20000 тяг · Мега-экран · 13-25W · Type-C",
+        "photo": "https://d3eye3cs3prop8.cloudfront.net/products/mo20000Pro/p8/p8-7.jpg",
+    },
+    "lostmary_8": {
+        "id": "lostmary_8",
+        "category": "lostmary",
+        "name": "Lost Mary 20000 - Лимон Лайм",
+        "description": "Вкус: Лимон лайм\n20000 тяг · Мега-экран · 13-25W · Type-C",
+        "photo": "https://d3eye3cs3prop8.cloudfront.net/products/mo20000Pro/p8/p8-8.jpg",
+    },
+    "lostmary_9": {
+        "id": "lostmary_9",
+        "category": "lostmary",
+        "name": "Lost Mary 20000 - Вишня Малина Лайм",
+        "description": "Вкус: Вишня малина лайм\n20000 тяг · Мега-экран · 13-25W · Type-C",
+        "photo": "https://d3eye3cs3prop8.cloudfront.net/products/mo20000Pro/p8/p8-9.jpg",
+    },
+    "lostmary_10": {
+        "id": "lostmary_10",
+        "category": "lostmary",
+        "name": "Lost Mary 20000 - Ледяной Виноград",
+        "description": "Вкус: Ледяной виноград\n20000 тяг · Мега-экран · 13-25W · Type-C",
+        "photo": "https://d3eye3cs3prop8.cloudfront.net/products/mo20000Pro/p8/p8-10.jpg",
+    },
+    "lostmary_11": {
+        "id": "lostmary_11",
+        "category": "lostmary",
+        "name": "Lost Mary 20000 - Кислая Малина Джем",
+        "description": "Вкус: Кислая малина джем\n20000 тяг · Мега-экран · 13-25W · Type-C",
+        "photo": "https://d3eye3cs3prop8.cloudfront.net/products/mo20000Pro/p8/p8-11.jpg",
+    },
+    "lostmary_12": {
+        "id": "lostmary_12",
+        "category": "lostmary",
+        "name": "Lost Mary 20000 - Кислая Ежевика Черника",
+        "description": "Вкус: Кислая ежевика черника\n20000 тяг · Мега-экран · 13-25W · Type-C",
+        "photo": "https://d3eye3cs3prop8.cloudfront.net/products/mo20000Pro/p8/p8-12.jpg",
+    },
+    "lostmary_13": {
+        "id": "lostmary_13",
+        "category": "lostmary",
+        "name": "Lost Mary 20000 - Жасмин Малина",
+        "description": "Вкус: Жасмин малина\n20000 тяг · Мега-экран · 13-25W · Type-C",
+        "photo": "https://d3eye3cs3prop8.cloudfront.net/products/mo20000Pro/p8/p8-13.jpg",
+    },
+    "lostmary_14": {
+        "id": "lostmary_14",
+        "category": "lostmary",
+        "name": "Lost Mary 20000 - Мятный Морской Бриз",
+        "description": "Вкус: Мятный морской бриз\n20000 тяг · Мега-экран · 13-25W · Type-C",
+        "photo": "https://d3eye3cs3prop8.cloudfront.net/products/mo20000Pro/p8/p8-14.jpg",
+    },
+    "lostmary_15": {
+        "id": "lostmary_15",
+        "category": "lostmary",
+        "name": "Lost Mary 20000 - Ледяной Арбуз",
+        "description": "Вкус: Ледяной арбуз\n20000 тяг · Мега-экран · 13-25W · Type-C",
+        "photo": "https://d3eye3cs3prop8.cloudfront.net/products/mo20000Pro/p8/p8-15.jpg",
+    },
+    "lostmary_16": {
+        "id": "lostmary_16",
+        "category": "lostmary",
+        "name": "Lost Mary 20000 - Двойное Яблоко",
+        "description": "Вкус: Двойное яблоко\n20000 тяг · Мега-экран · 13-25W · Type-C",
+        "photo": "https://d3eye3cs3prop8.cloudfront.net/products/mo20000Pro/p8/p8-1.jpg",
+    },
+    "lostmary_17": {
+        "id": "lostmary_17",
+        "category": "lostmary",
+        "name": "Lost Mary 20000 - Белый Персик Байя Всплеск",
+        "description": "Вкус: Белый персик байя всплеск\n20000 тяг · Мега-экран · 13-25W · Type-C",
+        "photo": "https://d3eye3cs3prop8.cloudfront.net/products/mo20000Pro/p8/p8-2.jpg",
+    },
+    "lostmary_18": {
+        "id": "lostmary_18",
+        "category": "lostmary",
+        "name": "Lost Mary 20000 - Грейпфрут Байя Всплеск",
+        "description": "Вкус: Грейпфрут байя всплеск\n20000 тяг · Мега-экран · 13-25W · Type-C",
+        "photo": "https://d3eye3cs3prop8.cloudfront.net/products/mo20000Pro/p8/p8-3.jpg",
+    },
+    "lostmary_19": {
+        "id": "lostmary_19",
+        "category": "lostmary",
+        "name": "Lost Mary 20000 - Грейпфрут Зеленый Чай",
+        "description": "Вкус: Грейпфрут зеленый чай\n20000 тяг · Мега-экран · 13-25W · Type-C",
+        "photo": "https://d3eye3cs3prop8.cloudfront.net/products/mo20000Pro/p8/p8-4.jpg",
+    },
+    "lostmary_20": {
+        "id": "lostmary_20",
+        "category": "lostmary",
+        "name": "Lost Mary 20000 - Зеленое Яблоко Байя Всплеск",
+        "description": "Вкус: Зеленое яблоко байя всплеск\n20000 тяг · Мега-экран · 13-25W · Type-C",
+        "photo": "https://d3eye3cs3prop8.cloudfront.net/products/mo20000Pro/p8/p8-5.jpg",
+    },
 }
 
 CATEGORIES = {
     "waka": "💨 WAKA soPro 20000",
     "pafos": "💨 PAFOS 20000",
     "puffmi": "💨 PUFFMI Mosh 40000",
+    "lostmary": "💨 Lost Mary MO20000 PRO",
     "snus": "🐂 D.L.T.A. Red Bull Edition",
+    "odens": "🇸🇪 Oden's (Швеция)",
 }
 
 def get_by_category(category: str) -> list:
