@@ -27,6 +27,7 @@ def snus_menu_kb() -> InlineKeyboardMarkup:
     builder = InlineKeyboardBuilder()
     builder.button(text="🐂 D.L.T.A. Red Bull Edition", callback_data="category:snus")
     builder.button(text="🇸🇪 Oden's (Швеция)", callback_data="category:odens")
+    builder.button(text="🟡 LOOP Никотиновые пластинки", callback_data="category:loop")
     builder.button(text="🔙 Назад", callback_data="menu:main")
     builder.adjust(1)
     return builder.as_markup()
@@ -39,7 +40,7 @@ def category_kb(category: str) -> InlineKeyboardMarkup:
         builder.button(text=name, callback_data=f"product:{p['id']}")
     if category in ["waka", "pafos", "puffmi", "lostmary"]:
         builder.button(text="🔙 Назад", callback_data="menu:vapes")
-    elif category in ["snus", "odens"]:
+    elif category in ["snus", "odens", "loop"]:
         builder.button(text="🔙 Назад", callback_data="menu:snus")
     else:
         builder.button(text="🔙 Назад", callback_data="menu:main")
