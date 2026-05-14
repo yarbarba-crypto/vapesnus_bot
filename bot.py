@@ -6,6 +6,7 @@ from aiogram.fsm.storage.memory import MemoryStorage
 from config import BOT_TOKEN
 from database import init_db
 from handlers import catalog, orders, admin, start, support
+from handlers.my_orders import router as my_orders_router
 
 logging.basicConfig(level=logging.INFO)
 
@@ -19,6 +20,7 @@ async def main():
     dp.include_router(orders.router)
     dp.include_router(admin.router)
     dp.include_router(support.router)
+    dp.include_router(my_orders_router)
 
     await bot.delete_webhook(drop_pending_updates=True)
     await dp.start_polling(bot)
