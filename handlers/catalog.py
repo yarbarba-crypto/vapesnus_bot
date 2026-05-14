@@ -46,6 +46,7 @@ async def show_category(callback: CallbackQuery):
         "lostmary": "💨 Lost Mary MO20000 PRO",
         "snus": "🐂 D.L.T.A. Red Bull Edition",
         "odens": "🇸🇪 Oden's (Швеция)",
+        "loop": "🟡 LOOP Никотиновые пластинки",
     }
     label = labels.get(category, category)
     await callback.message.delete()
