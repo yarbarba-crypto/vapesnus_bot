@@ -56,7 +56,7 @@ PRODUCTS = {
         "category": "odens",
         "name": "Oden's - Cold Dry Extreme White",
         "description": "Вкус: Холодная мята\nШведский снюс · Extreme White · Portion Dry · Made in Sweden",
-        "photo": "https://snusmarket.com/image/cache/catalog/products/odens/odens-cold-dry-extreme-white-portion-800x800.jpg",
+        "photo": "https://i.postimg.cc/CLRfyJ1x/Odens-Large5.webp",
     },
 
     # -- LOOP Никотиновые пластинки
