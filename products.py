@@ -59,6 +59,113 @@ PRODUCTS = {
         "photo": "https://snusmarket.com/image/cache/catalog/products/odens/odens-cold-dry-extreme-white-portion-800x800.jpg",
     },
 
+    # -- LOOP Никотиновые пластинки
+    "loop_1": {
+        "id": "loop_1",
+        "category": "loop",
+        "name": "LOOP ULTIMA - Crispy Ice",
+        "description": "Вкус: Хрустящий лёд\n55 пластинок · 11mg никотина · Без табака · Без дыма",
+        "photo": "https://loopstrips.eu/storage/products/thumb/w288_h298_YLL9JORrRcOGtoJv7K7p.png",
+    },
+    "loop_2": {
+        "id": "loop_2",
+        "category": "loop",
+        "name": "LOOP ULTIMA - Манго",
+        "description": "Вкус: Манго\n55 пластинок · 11mg никотина · Без табака · Без дыма",
+        "photo": "https://loopstrips.eu/storage/products/thumb/w288_h298_2994uIM5zA0vtgiGSfpc.png",
+    },
+    "loop_3": {
+        "id": "loop_3",
+        "category": "loop",
+        "name": "LOOP ULTIMA - Loop-Cola",
+        "description": "Вкус: Кола\n55 пластинок · 11mg никотина · Без табака · Без дыма",
+        "photo": "https://loopstrips.eu/storage/products/thumb/w288_h298_4TNk1AVLs4fqkpkM3gGO.png",
+    },
+    "loop_4": {
+        "id": "loop_4",
+        "category": "loop",
+        "name": "LOOP ULTIMA - Кокос",
+        "description": "Вкус: Кокос\n55 пластинок · 11mg никотина · Без табака · Без дыма",
+        "photo": "https://loopstrips.eu/storage/products/thumb/w288_h298_CO3LElWkMHJ1eCRfsMnF.png",
+    },
+    "loop_5": {
+        "id": "loop_5",
+        "category": "loop",
+        "name": "LOOP ULTIMA - Кактус",
+        "description": "Вкус: Кактус\n55 пластинок · 11mg никотина · Без табака · Без дыма",
+        "photo": "https://loopstrips.eu/storage/products/thumb/w288_h298_421ku2c147gUwbcJ3uyz.png",
+    },
+    "loop_6": {
+        "id": "loop_6",
+        "category": "loop",
+        "name": "LOOP - Ледяной Холод",
+        "description": "Вкус: Ледяной холод\n55 пластинок · 11mg никотина · Без табака · Без дыма",
+        "photo": "https://loopstrips.eu/storage/products/thumb/w288_h298_bv8yHNBWRBWHCa1eCsj7.png",
+    },
+    "loop_7": {
+        "id": "loop_7",
+        "category": "loop",
+        "name": "LOOP - Виноград",
+        "description": "Вкус: Виноград\n55 пластинок · 11mg никотина · Без табака · Без дыма",
+        "photo": "https://loopstrips.eu/storage/products/thumb/w288_h298_xvV4UsUXjUK8A4KInaNv.png",
+    },
+    "loop_8": {
+        "id": "loop_8",
+        "category": "loop",
+        "name": "LOOP - Клубника",
+        "description": "Вкус: Клубника\n55 пластинок · 11mg никотина · Без табака · Без дыма",
+        "photo": "https://loopstrips.eu/storage/products/thumb/w288_h298_vNjkhCqEZRDUtYZG8iRg.png",
+    },
+    "loop_9": {
+        "id": "loop_9",
+        "category": "loop",
+        "name": "LOOP - Черника",
+        "description": "Вкус: Черника\n55 пластинок · 11mg никотина · Без табака · Без дыма",
+        "photo": "https://loopstrips.eu/storage/products/thumb/w288_h298_5v7vWPPOPidRG08sDq31.png",
+    },
+    "loop_10": {
+        "id": "loop_10",
+        "category": "loop",
+        "name": "LOOP - Яблоко",
+        "description": "Вкус: Яблоко\n55 пластинок · 11mg никотина · Без табака · Без дыма",
+        "photo": "https://loopstrips.eu/storage/products/thumb/w288_h298_6bscfF65FCP3X4KPAmQy.png",
+    },
+    "loop_11": {
+        "id": "loop_11",
+        "category": "loop",
+        "name": "LOOP - Жвачка",
+        "description": "Вкус: Жвачка\n55 пластинок · 11mg никотина · Без табака · Без дыма",
+        "photo": "https://loopstrips.eu/storage/products/thumb/w288_h298_DoIwbQKfodXtRDSY0914.png",
+    },
+    "loop_12": {
+        "id": "loop_12",
+        "category": "loop",
+        "name": "LOOP - Ежевика",
+        "description": "Вкус: Ежевика\n55 пластинок · 11mg никотина · Без табака · Без дыма",
+        "photo": "https://loopstrips.eu/storage/products/thumb/w288_h298_9k91ceaVtGzp1HjGqSMa.png",
+    },
+    "loop_13": {
+        "id": "loop_13",
+        "category": "loop",
+        "name": "LOOP - Вишня",
+        "description": "Вкус: Вишня\n55 пластинок · 11mg никотина · Без табака · Без дыма",
+        "photo": "https://loopstrips.eu/storage/products/thumb/w288_h298_Q7cR2NIfbweCocGKtOXl.png",
+    },
+    "loop_14": {
+        "id": "loop_14",
+        "category": "loop",
+        "name": "LOOP - Персик",
+        "description": "Вкус: Персик\n55 пластинок · 11mg никотина · Без табака · Без дыма",
+        "photo": "https://loopstrips.eu/storage/products/thumb/w288_h298_DXme9YT54VGUpXhVgeOp.png",
+    },
+    "loop_15": {
+        "id": "loop_15",
+        "category": "loop",
+        "name": "LOOP - Арбуз",
+        "description": "Вкус: Арбуз\n55 пластинок · 11mg никотина · Без табака · Без дыма",
+        "photo": "https://loopstrips.eu/storage/products/thumb/w288_h298_q8mFVf7LYp4cHmxekM07.png",
+    },
+
     # -- WAKA soPro 20000
     "waka_1": {
         "id": "waka_1",
@@ -614,6 +721,7 @@ CATEGORIES = {
     "lostmary": "💨 Lost Mary MO20000 PRO",
     "snus": "🐂 D.L.T.A. Red Bull Edition",
     "odens": "🇸🇪 Oden's (Швеция)",
+    "loop": "🟡 LOOP Никотиновые пластинки",
 }
 
 def get_by_category(category: str) -> list:
