@@ -8,6 +8,7 @@ def main_menu_kb() -> InlineKeyboardMarkup:
     builder.button(text="💨 Электронные сигареты", callback_data="menu:vapes")
     builder.button(text="🟢 Снюс", callback_data="menu:snus")
     builder.button(text="💬 Задать вопрос", callback_data="support:ask")
+    builder.button(text="🛍 Пожелания и вопросы по товарам", callback_data="support:ask")
     builder.adjust(1)
     return builder.as_markup()
 
