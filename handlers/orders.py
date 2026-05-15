@@ -105,7 +105,8 @@ async def got_postamat(message: Message, state: FSMContext, bot: Bot):
                 admin_id,
                 f"🛍 *Новая заявка #{order_id}!*\n\n"
                 f"👤 [{user.full_name}](tg://user?id={user.id})\n"
-                f"🆔 ID: `{user.id}`\n"
+f"🆔 ID: `{user.id}`\n"
+f"📎 Тег: @{user.username if user.username else 'нет тега'}\n"
                 f"📦 Товар: *{product['name']}*\n"
                 f"{delivery_info}",
                 parse_mode="Markdown",
