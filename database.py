@@ -34,6 +34,32 @@ def init_db():
         )
     """)
 
+    cursor.execute("""
+        CREATE TABLE IF NOT EXISTS blocked_users (
+            user_id INTEGER PRIMARY KEY,
+            reason TEXT,
+            blocked_at TEXT
+        )
+    """)
+
+    cursor.execute("""
+        CREATE TABLE IF NOT EXISTS logs (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            user_id INTEGER,
+            action TEXT,
+            details TEXT,
+            created_at TEXT
+        )
+    """)
+
+    cursor.execute("""
+        CREATE TABLE IF NOT EXISTS rate_limit (
+            user_id INTEGER PRIMARY KEY,
+            requests INTEGER DEFAULT 0,
+            window_start TEXT
+        )
+    """)
+
     conn.commit()
     conn.close()
 
@@ -45,14 +71,6 @@ def add_user(user_id: int, username: str, full_name: str):
         INSERT OR IGNORE INTO users (user_id, username, full_name, registered_at)
         VALUES (?, ?, ?, ?)
     """, (user_id, username, full_name, datetime.now().isoformat()))
-    conn.commit()
-    conn.close()
-
-
-def set_user_city(user_id: int, city: str):
-    conn = get_db()
-    cursor = conn.cursor()
-    cursor.execute("UPDATE users SET city = ? WHERE user_id = ?", (city, user_id))
     conn.commit()
     conn.close()
 
@@ -128,3 +146,82 @@ def get_stats():
         "new_orders": new_orders,
         "accepted_orders": accepted_orders,
     }
+
+
+def is_blocked(user_id: int) -> bool:
+    conn = get_db()
+    cursor = conn.cursor()
+    cursor.execute("SELECT user_id FROM blocked_users WHERE user_id = ?", (user_id,))
+    row = cursor.fetchone()
+    conn.close()
+    return row is not None
+
+
+def block_user(user_id: int, reason: str = ""):
+    conn = get_db()
+    cursor = conn.cursor()
+    cursor.execute("""
+        INSERT OR REPLACE INTO blocked_users (user_id, reason, blocked_at)
+        VALUES (?, ?, ?)
+    """, (user_id, reason, datetime.now().isoformat()))
+    conn.commit()
+    conn.close()
+
+
+def unblock_user(user_id: int):
+    conn = get_db()
+    cursor = conn.cursor()
+    cursor.execute("DELETE FROM blocked_users WHERE user_id = ?", (user_id,))
+    conn.commit()
+    conn.close()
+
+
+def add_log(user_id: int, action: str, details: str = ""):
+    conn = get_db()
+    cursor = conn.cursor()
+    cursor.execute("""
+        INSERT INTO logs (user_id, action, details, created_at)
+        VALUES (?, ?, ?, ?)
+    """, (user_id, action, details, datetime.now().isoformat()))
+    conn.commit()
+    conn.close()
+
+
+def check_rate_limit(user_id: int, max_requests: int = 10) -> bool:
+    conn = get_db()
+    cursor = conn.cursor()
+    now = datetime.now()
+
+    cursor.execute("SELECT * FROM rate_limit WHERE user_id = ?", (user_id,))
+    row = cursor.fetchone()
+
+    if not row:
+        cursor.execute("""
+            INSERT INTO rate_limit (user_id, requests, window_start)
+            VALUES (?, 1, ?)
+        """, (user_id, now.isoformat()))
+        conn.commit()
+        conn.close()
+        return True
+
+    window_start = datetime.fromisoformat(row["window_start"])
+    diff = (now - window_start).total_seconds()
+
+    if diff > 60:
+        cursor.execute("""
+            UPDATE rate_limit SET requests = 1, window_start = ? WHERE user_id = ?
+        """, (now.isoformat(), user_id))
+        conn.commit()
+        conn.close()
+        return True
+
+    if row["requests"] >= max_requests:
+        conn.close()
+        return False
+
+    cursor.execute("""
+        UPDATE rate_limit SET requests = requests + 1 WHERE user_id = ?
+    """, (user_id,))
+    conn.commit()
+    conn.close()
+    return True
