@@ -5,6 +5,7 @@ from aiogram.fsm.storage.memory import MemoryStorage
 
 from config import BOT_TOKEN
 from database import init_db
+from middleware import SecurityMiddleware
 from handlers import catalog, orders, admin, start, support
 from handlers.my_orders import router as my_orders_router
 
@@ -14,6 +15,9 @@ async def main():
     init_db()
     bot = Bot(token=BOT_TOKEN)
     dp = Dispatcher(storage=MemoryStorage())
+
+    dp.message.middleware(SecurityMiddleware())
+    dp.callback_query.middleware(SecurityMiddleware())
 
     dp.include_router(start.router)
     dp.include_router(catalog.router)
